@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>護持株式会社 | GOJI Cleaning Service — goji-shogon.jp</title>
-  <meta name="description" content="東伊豆・伊豆半島の民宿・旅館・ゲストハウス専門の清掃サービス。護持株式会社。"/>
+  <title>護持株式会社公式サイト｜民宿・旅館専門清掃サービス — goji-shogon.jp</title>
+  <meta name="description" content="護持株式会社公式サイト。東伊豆・伊豆半島・京都エリアの民宿・旅館・ゲストハウス専門の清掃サービス。護持株式会社が提供する高品質な宿泊施設清掃。goji-shogon.jp"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;600&family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
       --ink:#111820;--deep:#1C2B3A;
-      --green:#3D7A52;--green2:#5A9E6F;
+      --green:#3D7A52;--green2:#5A9E6F;--green3:#EAF5EE;
       --mist:#8FA3B1;--cloud:#F0F4F7;
       --white:#FFFFFF;--sand:#FAF8F5;
       --rule:rgba(61,122,82,.15);--gold:#B89A58;
@@ -23,195 +23,249 @@
     [data-lang=ja] .t-zh,[data-lang=ja] .t-en{display:none}
     [data-lang=zh] .t-ja,[data-lang=zh] .t-en{display:none}
     [data-lang=en] .t-ja,[data-lang=en] .t-zh{display:none}
-    [data-lang=zh] body,[data-lang=zh] .serif{font-family:'Noto Serif TC','Inter',sans-serif}
+    [data-lang=zh] body{font-family:'Noto Serif TC','Inter',sans-serif}
     [data-lang=en] body{font-family:'Inter','Noto Sans JP',sans-serif}
 
     /* NAV */
-    nav{position:fixed;top:0;left:0;right:0;z-index:300;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(17,24,32,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(61,122,82,.2)}
-    .logo{text-decoration:none;display:flex;align-items:baseline;gap:.5rem}
-    .logo-mark{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff;letter-spacing:.06em}
-    .logo-mark span{color:var(--green2)}
-    .logo-tag{font-size:.6rem;color:var(--mist);letter-spacing:.1em;text-transform:uppercase}
-    .nav-right{display:flex;align-items:center;gap:1.5rem}
-    .nav-links{display:flex;gap:1.8rem;list-style:none}
-    .nav-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.73rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;transition:color .2s}
+    nav{position:fixed;top:0;left:0;right:0;z-index:300;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(17,24,32,.97);backdrop-filter:blur(16px);border-bottom:1px solid rgba(61,122,82,.2)}
+    .logo{text-decoration:none;display:flex;flex-direction:column;line-height:1.1}
+    .logo-ja{font-family:'Noto Serif JP',serif;font-size:.72rem;color:rgba(255,255,255,.55);letter-spacing:.12em}
+    .logo-goji{font-family:'DM Serif Display',serif;font-size:1.25rem;color:#fff;letter-spacing:.08em;line-height:1}
+    .logo-goji span{color:var(--green2)}
+    .nav-right{display:flex;align-items:center;gap:1.4rem}
+    .nav-links{display:flex;gap:1.6rem;list-style:none}
+    .nav-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.72rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;transition:color .2s}
     .nav-links a:hover{color:var(--green2)}
-    .nav-cta{background:var(--green);color:#fff!important;padding:.4rem 1.1rem;border-radius:2px;font-size:.72rem!important;font-weight:600!important;letter-spacing:.08em!important;transition:background .2s!important}
+    .nav-cta{background:var(--green);color:#fff!important;padding:.38rem 1.1rem;border-radius:2px;font-size:.71rem!important;font-weight:600!important;letter-spacing:.07em!important;transition:background .2s!important}
     .nav-cta:hover{background:var(--green2)!important}
-    .lang-sw{display:flex;gap:.3rem}
-    .lb{background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.4);font-size:.63rem;letter-spacing:.07em;padding:.22rem .5rem;cursor:pointer;border-radius:2px;font-family:inherit;transition:all .2s}
+    .lang-sw{display:flex;gap:.28rem}
+    .lb{background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.38);font-size:.62rem;letter-spacing:.07em;padding:.2rem .48rem;cursor:pointer;border-radius:2px;font-family:inherit;transition:all .2s}
     .lb:hover,.lb.active{border-color:var(--green2);color:var(--green2);background:rgba(61,122,82,.1)}
     .burger{display:none;cursor:pointer;flex-direction:column;gap:5px}
     .burger span{width:22px;height:1.5px;background:#fff;display:block;border-radius:1px}
-    @media(max-width:820px){
+    @media(max-width:860px){
       .nav-links{display:none;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:var(--ink);padding:1.5rem 5vw;gap:1.2rem;border-top:1px solid rgba(255,255,255,.05)}
       .nav-links.open{display:flex}
       .burger{display:flex}
-      .logo-tag,.nav-cta-li{display:none}
+      .nav-cta-li{display:none}
     }
 
+    /* TOPBAR */
+    .topbar{background:var(--green);color:#fff;text-align:center;padding:.45rem 1rem;font-size:.72rem;letter-spacing:.06em;font-weight:500}
+    .topbar span{opacity:.7;margin:0 .4rem}
+
     /* HERO */
-    #hero{min-height:100vh;background:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:80px 5vw 0;position:relative;overflow:hidden}
+    #hero{min-height:100vh;background:var(--ink);display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:80px 5vw 0;position:relative;overflow:hidden;gap:3rem}
+    @media(max-width:860px){#hero{grid-template-columns:1fr;padding-bottom:60px}}
     #hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
     .wipe{position:absolute;top:0;left:-3px;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--green) 30%,var(--green2) 70%,transparent);animation:wipe 9s ease-in-out infinite}
     @keyframes wipe{0%{left:-3px;opacity:0}5%{opacity:1}95%{opacity:1}100%{left:100%;opacity:0}}
-    .hero-in{position:relative;z-index:1;max-width:780px}
-    .eyebrow{font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green2);display:flex;align-items:center;gap:.8rem;margin-bottom:2.2rem;font-weight:500}
-    .eyebrow::before{content:'';width:36px;height:1px;background:var(--green2);display:block}
-    .h1j{font-family:'Noto Serif JP',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;color:#fff;line-height:1.25;margin-bottom:.7rem;letter-spacing:.04em}
+
+    .hero-left{position:relative;z-index:1}
+    .badge-official{display:inline-flex;align-items:center;gap:.5rem;background:rgba(61,122,82,.25);border:1px solid rgba(90,158,111,.4);color:var(--green2);font-size:.7rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .9rem;border-radius:2px;margin-bottom:1.6rem}
+    .badge-official::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--green2);display:block;animation:blink 2s ease-in-out infinite}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+    .hero-company{font-family:'Noto Serif JP',serif;font-size:.78rem;color:rgba(255,255,255,.45);letter-spacing:.14em;margin-bottom:.6rem}
+    .h1j{font-family:'Noto Serif JP',serif;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:300;color:#fff;line-height:1.25;margin-bottom:.6rem;letter-spacing:.04em}
     .h1j .acc{color:var(--green2);font-weight:600}
-    .h1z{font-family:'Noto Serif TC',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:300;color:#fff;line-height:1.3;margin-bottom:.7rem}
+    .h1z{font-family:'Noto Serif TC',serif;font-size:clamp(1.8rem,4.5vw,3rem);font-weight:300;color:#fff;line-height:1.3;margin-bottom:.6rem}
     .h1z .acc{color:var(--green2);font-weight:600}
-    .h1e{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:400;color:#fff;line-height:1.3;margin-bottom:.7rem}
+    .h1e{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,4vw,2.9rem);font-weight:400;color:#fff;line-height:1.3;margin-bottom:.6rem}
     .h1e .acc{color:var(--green2)}
-    .hsub{font-family:'DM Serif Display',serif;font-size:clamp(.9rem,1.8vw,1.2rem);color:var(--mist);letter-spacing:.12em;margin-bottom:2.5rem}
-    .hdiv{width:48px;height:1px;background:var(--green);margin-bottom:2rem}
-    .hdesc{font-size:.93rem;font-weight:300;line-height:1.95;color:rgba(255,255,255,.55);max-width:540px;margin-bottom:3rem}
-    .hbtns{display:flex;gap:1rem;flex-wrap:wrap}
-    .bpri{background:var(--green);color:#fff;padding:.85rem 2rem;border-radius:2px;text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,transform .15s;display:inline-block}
+    .hsub{font-family:'DM Serif Display',serif;font-size:clamp(.88rem,1.6vw,1.1rem);color:var(--mist);letter-spacing:.1em;margin-bottom:2.2rem}
+    .hdiv{width:48px;height:1px;background:var(--green);margin-bottom:1.8rem}
+    .hdesc{font-size:.92rem;font-weight:300;line-height:1.95;color:rgba(255,255,255,.55);margin-bottom:2.6rem}
+    .hbtns{display:flex;gap:.9rem;flex-wrap:wrap}
+    .bpri{background:var(--green);color:#fff;padding:.82rem 1.8rem;border-radius:2px;text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,transform .15s;display:inline-block}
     .bpri:hover{background:var(--green2);transform:translateY(-2px)}
-    .bgh{border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);padding:.85rem 2rem;border-radius:2px;text-decoration:none;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;transition:border-color .2s,color .2s;display:inline-block}
+    .bgh{border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);padding:.82rem 1.8rem;border-radius:2px;text-decoration:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:border-color .2s,color .2s;display:inline-block}
     .bgh:hover{border-color:var(--green2);color:var(--green2)}
-    .hstats{display:flex;gap:2.5rem;margin-top:4.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap}
-    .sn{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--green2);line-height:1}
-    .sl{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.25rem;letter-spacing:.06em}
-    .hwave{position:absolute;bottom:-1px;left:0;right:0;height:90px}
+    .hstats{display:flex;gap:2.2rem;margin-top:3.5rem;padding-top:1.8rem;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap}
+    .sn{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--green2);line-height:1}
+    .sl{font-size:.68rem;color:rgba(255,255,255,.38);margin-top:.22rem;letter-spacing:.06em}
+
+    /* Hero right — photo grid */
+    .hero-right{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:.8rem}
+    @media(max-width:860px){.hero-right{display:none}}
+    .hphoto{border-radius:4px;overflow:hidden;position:relative;background:var(--deep)}
+    .hphoto:first-child{grid-column:1/3;height:200px}
+    .hphoto:not(:first-child){height:140px}
+    .hphoto canvas{width:100%;height:100%;display:block}
+    .hphoto-label{position:absolute;bottom:.7rem;left:.8rem;font-size:.65rem;color:rgba(255,255,255,.6);background:rgba(0,0,0,.5);padding:.2rem .55rem;border-radius:2px;letter-spacing:.06em}
+
+    .hwave{position:absolute;bottom:-1px;left:0;right:0;height:80px}
 
     /* SECTIONS */
-    .sec{padding:96px 5vw}
+    .sec{padding:88px 5vw}
     .sec-w{background:var(--white)}
     .sec-c{background:var(--cloud)}
     .sec-d{background:var(--deep)}
-    .slabel{font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:500;display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+    .slabel{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:500;display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
     .slabel::before{content:'';width:24px;height:1px;background:var(--green);display:block}
-    .stitle{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,3.2vw,2.4rem);font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:.35rem}
-    .stitle-e{font-family:'DM Serif Display',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:.35rem}
-    .stitle-z{font-family:'Noto Serif TC',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:.35rem}
-    .ssub{font-family:'DM Serif Display',serif;font-size:.93rem;color:var(--mist);letter-spacing:.1em;margin-bottom:3rem}
+    .stitle{font-family:'Noto Serif JP',serif;font-size:clamp(1.55rem,3vw,2.3rem);font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:.35rem}
+    .stitle-e{font-family:'DM Serif Display',serif;font-size:clamp(1.45rem,2.8vw,2.1rem);font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:.35rem}
+    .stitle-z{font-family:'Noto Serif TC',serif;font-size:clamp(1.45rem,2.8vw,2.1rem);font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:.35rem}
+    .ssub{font-family:'DM Serif Display',serif;font-size:.92rem;color:var(--mist);letter-spacing:.1em;margin-bottom:2.8rem}
     .sec-d .stitle,.sec-d .stitle-e,.sec-d .stitle-z{color:#fff}
     .sec-d .slabel{color:var(--green2)}
     .sec-d .slabel::before{background:var(--green2)}
 
+    /* AREA BANNER */
+    #area{background:var(--green);padding:3.5rem 5vw;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:2rem}
+    .area-text h2{font-family:'Noto Serif JP',serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:400;color:#fff;margin-bottom:.5rem}
+    .area-text p{font-size:.88rem;color:rgba(255,255,255,.75);font-weight:300;line-height:1.7}
+    .area-chips{display:flex;flex-wrap:wrap;gap:.7rem}
+    .chip{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;padding:.45rem 1.1rem;border-radius:20px;font-size:.8rem;font-weight:500;letter-spacing:.04em;display:flex;align-items:center;gap:.4rem}
+    .chip-new{background:rgba(255,255,255,.95);color:var(--green);border-color:transparent;font-weight:700}
+    .chip-badge{background:var(--ink);color:var(--green2);font-size:.58rem;padding:.15rem .4rem;border-radius:10px;font-weight:700;letter-spacing:.05em}
+
+    /* PHOTO STRIP — between sections */
+    .photo-strip{display:grid;gap:0}
+    .photo-strip.cols3{grid-template-columns:repeat(3,1fr)}
+    .photo-strip.cols2{grid-template-columns:repeat(2,1fr)}
+    .pstrip-item{position:relative;height:240px;overflow:hidden;background:var(--deep)}
+    .pstrip-item canvas{width:100%;height:100%;display:block}
+    .pstrip-caption{position:absolute;bottom:0;left:0;right:0;padding:.8rem 1.2rem;background:linear-gradient(transparent,rgba(0,0,0,.65));color:#fff;font-size:.78rem;font-family:'Noto Serif JP',serif;letter-spacing:.06em}
+    .pstrip-caption span{font-size:.65rem;color:rgba(255,255,255,.6);display:block;margin-top:.15rem}
+
     /* WHY */
-    .why-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
-    .wc{background:var(--white);padding:2.5rem 2rem;transition:background .25s}
+    .why-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+    .wc{background:var(--white);padding:2.4rem 1.9rem;transition:background .25s}
     .wc:hover{background:var(--sand)}
-    .wi{font-size:1.8rem;margin-bottom:1.2rem}
-    .wt{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.6rem}
-    .wte{font-family:'DM Serif Display',serif;font-size:1rem;font-weight:400;color:var(--ink);margin-bottom:.6rem}
-    .wtz{font-family:'Noto Serif TC',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.6rem}
-    .wd{font-size:.82rem;color:#5a6a7a;line-height:1.85;font-weight:300}
+    .wi{font-size:1.7rem;margin-bottom:1.1rem}
+    .wt{font-family:'Noto Serif JP',serif;font-size:.97rem;font-weight:600;color:var(--ink);margin-bottom:.55rem}
+    .wte{font-family:'DM Serif Display',serif;font-size:.97rem;font-weight:400;color:var(--ink);margin-bottom:.55rem}
+    .wtz{font-family:'Noto Serif TC',serif;font-size:.97rem;font-weight:600;color:var(--ink);margin-bottom:.55rem}
+    .wd{font-size:.81rem;color:#5a6a7a;line-height:1.85;font-weight:300}
 
     /* SERVICES */
-    .srv-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem}
+    .srv-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.4rem}
     .sc{background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:4px;overflow:hidden;transition:transform .25s,box-shadow .25s}
     .sc:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
-    .sh{padding:2rem 2rem 1rem;border-bottom:3px solid var(--green);display:flex;align-items:flex-start;gap:1rem}
-    .se{font-size:2rem;flex-shrink:0}
-    .sn2{font-family:'Noto Serif JP',serif;font-size:1.03rem;font-weight:600;color:var(--ink)}
-    .sn2e{font-family:'DM Serif Display',serif;font-size:1rem;font-weight:400;color:var(--ink)}
-    .sn2z{font-family:'Noto Serif TC',serif;font-size:1rem;font-weight:600;color:var(--ink)}
-    .snen{font-size:.7rem;color:var(--mist);letter-spacing:.07em;text-transform:uppercase;margin-top:.15rem}
-    .sb{padding:1.5rem 2rem}
-    .sd{font-size:.82rem;color:#5a6a7a;line-height:1.85;font-weight:300;margin-bottom:1.2rem}
-    .tags{display:flex;flex-wrap:wrap;gap:.4rem}
-    .tag{background:rgba(61,122,82,.09);color:var(--green);font-size:.68rem;padding:.22rem .65rem;border-radius:20px;font-weight:500}
+    .sc-img{height:170px;overflow:hidden;position:relative;background:var(--deep)}
+    .sc-img canvas{width:100%;height:100%;display:block}
+    .sh{padding:1.6rem 1.9rem .9rem;border-bottom:3px solid var(--green);display:flex;align-items:flex-start;gap:.9rem}
+    .se{font-size:1.8rem;flex-shrink:0}
+    .sn2{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:600;color:var(--ink)}
+    .sn2e{font-family:'DM Serif Display',serif;font-size:.98rem;font-weight:400;color:var(--ink)}
+    .sn2z{font-family:'Noto Serif TC',serif;font-size:.98rem;font-weight:600;color:var(--ink)}
+    .snen{font-size:.68rem;color:var(--mist);letter-spacing:.07em;text-transform:uppercase;margin-top:.15rem}
+    .sb{padding:1.3rem 1.9rem}
+    .sd{font-size:.81rem;color:#5a6a7a;line-height:1.85;font-weight:300;margin-bottom:1.1rem}
+    .tags{display:flex;flex-wrap:wrap;gap:.38rem}
+    .tag{background:rgba(61,122,82,.09);color:var(--green);font-size:.66rem;padding:.2rem .62rem;border-radius:20px;font-weight:500}
 
     /* FLOW */
-    .flow-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;margin-top:1rem}
-    .fs{padding:2.5rem 1.5rem 2rem;position:relative;text-align:center}
-    .fs::after{content:'→';position:absolute;right:-.4rem;top:45%;color:var(--green2);font-size:1.2rem}
+    .flow-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0;margin-top:1rem}
+    .fs{padding:2.4rem 1.4rem 1.8rem;position:relative;text-align:center}
+    .fs::after{content:'→';position:absolute;right:-.4rem;top:44%;color:var(--green2);font-size:1.1rem}
     .fs:last-child::after{display:none}
-    .fn{font-family:'DM Serif Display',serif;font-size:2.8rem;color:rgba(61,122,82,.12);line-height:1;margin-bottom:.4rem}
-    .fi{font-size:1.6rem;margin-bottom:.7rem}
-    .ft2{font-family:'Noto Serif JP',serif;font-size:.93rem;font-weight:600;color:var(--ink);margin-bottom:.45rem}
-    .ft2e{font-family:'DM Serif Display',serif;font-size:.93rem;font-weight:400;color:var(--ink);margin-bottom:.45rem}
-    .ft2z{font-family:'Noto Serif TC',serif;font-size:.93rem;font-weight:600;color:var(--ink);margin-bottom:.45rem}
-    .fd{font-size:.77rem;color:var(--mist);line-height:1.7}
+    .fn{font-family:'DM Serif Display',serif;font-size:2.6rem;color:rgba(61,122,82,.11);line-height:1;margin-bottom:.35rem}
+    .fi{font-size:1.5rem;margin-bottom:.65rem}
+    .ft2{font-family:'Noto Serif JP',serif;font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.4rem}
+    .ft2e{font-family:'DM Serif Display',serif;font-size:.9rem;font-weight:400;color:var(--ink);margin-bottom:.4rem}
+    .ft2z{font-family:'Noto Serif TC',serif;font-size:.9rem;font-weight:600;color:var(--ink);margin-bottom:.4rem}
+    .fd{font-size:.76rem;color:var(--mist);line-height:1.68}
 
     /* COMPANY */
-    .co-g{display:grid;grid-template-columns:1fr 1.1fr;gap:5vw;align-items:start}
+    .co-g{display:grid;grid-template-columns:1fr 1.05fr;gap:5vw;align-items:start}
     .co-t{width:100%;border-collapse:collapse}
     .co-t tr{border-bottom:1px solid rgba(0,0,0,.07)}
     .co-t tr:first-child{border-top:1px solid rgba(0,0,0,.07)}
-    .co-t th{width:32%;padding:1.1rem .5rem 1.1rem 0;font-size:.74rem;color:var(--mist);font-weight:500;text-align:left;vertical-align:top;letter-spacing:.05em}
-    .co-t td{padding:1.1rem 0;font-size:.87rem;line-height:1.7;font-weight:300;color:var(--ink)}
-    .co-t td strong{font-weight:600;font-size:.95rem}
-    .co-t td small{color:var(--mist);font-size:.73rem;display:block}
-    .co-v{background:linear-gradient(160deg,#1C2B3A 0%,#111820 100%);border-radius:4px;padding:2.8rem 2.4rem;display:flex;flex-direction:column;gap:2rem}
-    .cv-domain{font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--green2);letter-spacing:.1em}
-    .cv-tag-j{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.75);line-height:1.8}
-    .cv-tag-z{font-family:'Noto Serif TC',serif;font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.75);line-height:1.8}
-    .cv-tag-e{font-family:'DM Serif Display',serif;font-size:1.05rem;font-weight:400;color:rgba(255,255,255,.75);line-height:1.8}
-    .cv-list{display:flex;flex-direction:column;gap:.55rem}
-    .cv-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.78rem;color:rgba(255,255,255,.5)}
+    .co-t th{width:32%;padding:1rem .4rem 1rem 0;font-size:.73rem;color:var(--mist);font-weight:500;text-align:left;vertical-align:top;letter-spacing:.05em}
+    .co-t td{padding:1rem 0;font-size:.85rem;line-height:1.7;font-weight:300;color:var(--ink)}
+    .co-t td strong{font-weight:600;font-size:.92rem}
+    .co-t td small{color:var(--mist);font-size:.72rem;display:block}
+    .co-v{background:linear-gradient(160deg,#1C2B3A 0%,#111820 100%);border-radius:4px;padding:2.6rem 2.3rem;display:flex;flex-direction:column;gap:1.8rem}
+    .cv-goji{font-family:'DM Serif Display',serif;font-size:3rem;color:rgba(90,158,111,.15);letter-spacing:.05em;line-height:1;margin-bottom:-.5rem}
+    .cv-domain{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--green2);letter-spacing:.1em}
+    .cv-company{font-family:'Noto Serif JP',serif;font-size:1.1rem;color:#fff;font-weight:400;letter-spacing:.08em}
+    .cv-tag-j{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:300;color:rgba(255,255,255,.7);line-height:1.75}
+    .cv-tag-z{font-family:'Noto Serif TC',serif;font-size:1rem;font-weight:300;color:rgba(255,255,255,.7);line-height:1.75}
+    .cv-tag-e{font-family:'DM Serif Display',serif;font-size:1rem;font-weight:400;color:rgba(255,255,255,.7);line-height:1.75}
+    .cv-list{display:flex;flex-direction:column;gap:.5rem}
+    .cv-item{display:flex;align-items:flex-start;gap:.65rem;font-size:.77rem;color:rgba(255,255,255,.48)}
     .cv-item::before{content:'✓';color:var(--green2);font-weight:700;flex-shrink:0}
-    @media(max-width:780px){.co-g{grid-template-columns:1fr}.co-v{display:none}}
+    @media(max-width:760px){.co-g{grid-template-columns:1fr}.co-v{display:none}}
 
     /* CONTACT */
-    #contact{background:var(--deep);padding:96px 5vw;position:relative;overflow:hidden}
+    #contact{background:var(--deep);padding:88px 5vw;position:relative;overflow:hidden}
     #contact .stitle,#contact .stitle-e,#contact .stitle-z{color:#fff}
     #contact .slabel{color:var(--green2)}
     #contact .slabel::before{background:var(--green2)}
     .ct-g{display:grid;grid-template-columns:1fr 1.35fr;gap:6vw;align-items:start;position:relative;z-index:1}
-    .ci-list{display:flex;flex-direction:column;gap:1.8rem;margin-top:.5rem}
-    .ci-row{display:flex;gap:1rem;padding-bottom:1.8rem;border-bottom:1px solid rgba(255,255,255,.05)}
+    .ci-list{display:flex;flex-direction:column;gap:1.6rem;margin-top:.4rem}
+    .ci-row{display:flex;gap:.9rem;padding-bottom:1.6rem;border-bottom:1px solid rgba(255,255,255,.05)}
     .ci-row:last-child{border:none}
-    .ci-ico{font-size:1rem;width:28px;text-align:center;flex-shrink:0;padding-top:.1rem}
-    .ci-ttl{font-size:.76rem;font-weight:500;color:#fff;letter-spacing:.08em;margin-bottom:.28rem}
-    .ci-val{font-size:.8rem;color:var(--mist);line-height:1.7;font-weight:300}
-    .fbox{background:rgba(255,255,255,.04);border:1px solid rgba(61,122,82,.2);padding:2.5rem;border-radius:4px}
-    .fbox-ttl{font-family:'Noto Serif JP',serif;font-size:1rem;color:#fff;margin-bottom:1.8rem;font-weight:400}
-    .fbox-ttle{font-family:'DM Serif Display',serif;font-size:1rem;color:#fff;margin-bottom:1.8rem;font-weight:400}
-    .fbox-ttlz{font-family:'Noto Serif TC',serif;font-size:1rem;color:#fff;margin-bottom:1.8rem;font-weight:400}
-    .f-row2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-    .fg{margin-bottom:.95rem}
-    .fg label{display:block;font-size:.63rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:.38rem}
-    .fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:.7rem .9rem;color:#fff;font-size:.86rem;font-family:inherit;outline:none;border-radius:2px;appearance:none;transition:border-color .2s}
+    .ci-ico{font-size:1rem;width:26px;text-align:center;flex-shrink:0;padding-top:.1rem}
+    .ci-ttl{font-size:.75rem;font-weight:500;color:#fff;letter-spacing:.07em;margin-bottom:.26rem}
+    .ci-val{font-size:.79rem;color:var(--mist);line-height:1.7;font-weight:300}
+    .fbox{background:rgba(255,255,255,.04);border:1px solid rgba(61,122,82,.22);padding:2.4rem;border-radius:4px}
+    .fbox-ttl{font-family:'Noto Serif JP',serif;font-size:.97rem;color:#fff;margin-bottom:1.7rem;font-weight:400}
+    .fbox-ttle{font-family:'DM Serif Display',serif;font-size:.97rem;color:#fff;margin-bottom:1.7rem;font-weight:400}
+    .fbox-ttlz{font-family:'Noto Serif TC',serif;font-size:.97rem;color:#fff;margin-bottom:1.7rem;font-weight:400}
+    .f-row2{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+    .fg{margin-bottom:.9rem}
+    .fg label{display:block;font-size:.62rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:.37rem}
+    .fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:.68rem .88rem;color:#fff;font-size:.85rem;font-family:inherit;outline:none;border-radius:2px;appearance:none;transition:border-color .2s}
     .fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.18)}
     .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--green2)}
     .fg select option{background:var(--deep)}
-    .fg textarea{resize:vertical;min-height:86px}
-    .bsub{width:100%;background:var(--green);color:#fff;border:none;padding:.9rem;font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:2px;margin-top:.5rem;font-family:inherit;transition:background .2s}
+    .fg textarea{resize:vertical;min-height:82px}
+    .bsub{width:100%;background:var(--green);color:#fff;border:none;padding:.88rem;font-size:.79rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:2px;margin-top:.45rem;font-family:inherit;transition:background .2s}
     .bsub:hover{background:var(--green2)}
     .bsub:disabled{opacity:.5;cursor:not-allowed}
-    @media(max-width:780px){.ct-g{grid-template-columns:1fr}.f-row2{grid-template-columns:1fr}}
+    @media(max-width:760px){.ct-g{grid-template-columns:1fr}.f-row2{grid-template-columns:1fr}}
 
     /* TOAST */
-    #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(60px);background:var(--ink);border:1px solid var(--green);color:#fff;padding:.9rem 2rem;font-size:.83rem;border-radius:3px;box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:999;opacity:0;transition:transform .4s cubic-bezier(.34,1.4,.64,1),opacity .4s;pointer-events:none;white-space:nowrap}
+    #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(60px);background:var(--ink);border:1px solid var(--green);color:#fff;padding:.88rem 1.9rem;font-size:.82rem;border-radius:3px;box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:999;opacity:0;transition:transform .4s cubic-bezier(.34,1.4,.64,1),opacity .4s;pointer-events:none;white-space:nowrap}
     #toast.show{transform:translateX(-50%) translateY(0);opacity:1}
 
     /* FOOTER */
-    footer{background:var(--ink);padding:3rem 5vw 1.8rem}
-    .ft-top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.05);flex-wrap:wrap;gap:1.5rem}
-    .ft-brand .fe{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff;letter-spacing:.08em}
+    footer{background:var(--ink);padding:2.8rem 5vw 1.8rem}
+    .ft-top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:1.8rem;border-bottom:1px solid rgba(255,255,255,.05);flex-wrap:wrap;gap:1.4rem}
+    .ft-brand .fe{font-family:'DM Serif Display',serif;font-size:1.35rem;color:#fff;letter-spacing:.08em}
     .ft-brand .fe span{color:var(--green2)}
-    .ft-brand .fj{font-size:.72rem;color:var(--mist);margin-top:.2rem;letter-spacing:.1em}
-    .ft-brand .fd2{font-size:.68rem;color:rgba(255,255,255,.22);margin-top:.4rem;letter-spacing:.06em}
-    .ft-info{font-size:.73rem;color:var(--mist);line-height:1.9;font-weight:300;text-align:right}
-    .ft-bot{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:.6rem}
-    .ft-copy{font-size:.67rem;color:rgba(255,255,255,.18)}
-    .ft-links{display:flex;gap:1.4rem}
-    .ft-links a{font-size:.67rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
+    .ft-brand .fj{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:.2rem;letter-spacing:.1em}
+    .ft-brand .fd2{font-size:.65rem;color:rgba(255,255,255,.2);margin-top:.35rem;letter-spacing:.06em}
+    .ft-info{font-size:.72rem;color:var(--mist);line-height:1.9;font-weight:300;text-align:right}
+    .ft-bot{display:flex;justify-content:space-between;align-items:center;padding-top:1.4rem;flex-wrap:wrap;gap:.55rem}
+    .ft-copy{font-size:.65rem;color:rgba(255,255,255,.18)}
+    .ft-links{display:flex;gap:1.3rem}
+    .ft-links a{font-size:.65rem;color:rgba(255,255,255,.23);text-decoration:none;transition:color .2s}
     .ft-links a:hover{color:var(--green2)}
-    @media(max-width:600px){.ft-info{text-align:left}.ft-top{flex-direction:column}}
+    @media(max-width:580px){.ft-info{text-align:left}.ft-top{flex-direction:column}}
 
     /* REVEAL */
     .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
     .rv.on{opacity:1;transform:none}
-    @media(max-width:600px){.flow-g{grid-template-columns:1fr 1fr}.fs::after{display:none}}
+    @media(max-width:580px){.flow-g{grid-template-columns:1fr 1fr}.fs::after{display:none}.photo-strip.cols3{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
 
+<!-- TOPBAR -->
+<div class="topbar">
+  <span class="t-ja">護持株式会社公式サイト</span>
+  <span class="t-zh">護持株式會社官方網站</span>
+  <span class="t-en">GOJI Co., Ltd. Official Website</span>
+  <span>·</span>
+  goji-shogon.jp
+  <span>·</span>
+  <span class="t-ja">東伊豆・京都エリア対応</span>
+  <span class="t-zh">東伊豆・京都地區服務</span>
+  <span class="t-en">Serving Izu & Kyoto regions</span>
+</div>
+
+<!-- NAV -->
 <nav id="nav">
   <a href="#" class="logo">
-    <span class="logo-mark">GO<span>JI</span></span>
-    <span class="logo-tag">goji-shogon.jp</span>
+    <span class="logo-ja">護持株式会社</span>
+    <span class="logo-goji">GO<span>JI</span></span>
   </a>
   <div class="nav-right">
     <ul class="nav-links" id="navLinks">
-      <li><a href="#why"><span class="t-ja">選ばれる理由</span><span class="t-zh">選擇原因</span><span class="t-en">Why Us</span></a></li>
+      <li><a href="#area"><span class="t-ja">対応エリア</span><span class="t-zh">服務地區</span><span class="t-en">Areas</span></a></li>
       <li><a href="#services"><span class="t-ja">サービス</span><span class="t-zh">服務項目</span><span class="t-en">Services</span></a></li>
       <li><a href="#flow"><span class="t-ja">ご利用の流れ</span><span class="t-zh">服務流程</span><span class="t-en">How It Works</span></a></li>
       <li><a href="#company"><span class="t-ja">会社概要</span><span class="t-zh">公司概要</span><span class="t-en">About</span></a></li>
@@ -229,65 +283,99 @@
 <!-- HERO -->
 <section id="hero">
   <div class="wipe"></div>
-  <div class="hero-in">
-    <div class="eyebrow">
-      <span class="t-ja">護持株式会社 · 民宿専門清掃サービス · goji-shogon.jp</span>
-      <span class="t-zh">護持株式會社 · 民宿專業清潔服務 · goji-shogon.jp</span>
-      <span class="t-en">GOJI Co., Ltd. · Professional Guesthouse Cleaning · goji-shogon.jp</span>
+
+  <div class="hero-left">
+    <div class="badge-official">
+      <span class="t-ja">護持株式会社公式サイト</span>
+      <span class="t-zh">護持株式會社官方網站</span>
+      <span class="t-en">GOJI Co., Ltd. Official</span>
     </div>
+    <div class="hero-company t-ja">護持株式会社 · GOJI Co., Ltd.</div>
     <h1 class="t-ja h1j">清潔は、<span class="acc">おもてなし</span>の<br/>はじまりです。</h1>
     <h1 class="t-zh h1z">清潔，是<span class="acc">款待</span>的起點。</h1>
     <h1 class="t-en h1e">Cleanliness is<br/><span class="acc">the first welcome.</span></h1>
-    <p class="t-ja hsub">Cleanliness begins every perfect stay.</p>
-    <p class="t-zh hsub" style="font-family:'Noto Serif TC',serif">清潔，始於每一次完美的住宿體驗。</p>
+    <p class="t-ja hsub">護持株式会社が提供する、民宿専門の清掃サービス</p>
+    <p class="t-zh hsub" style="font-family:'Noto Serif TC',serif">由護持株式會社提供的民宿專業清掃服務</p>
     <div class="hdiv"></div>
-    <p class="t-ja hdesc">東伊豆・伊豆半島の民宿・ゲストハウス・旅館を専門とした清掃サービスです。<br/>チェックアウトからチェックインまで、お部屋を「迎える空間」に整えます。</p>
-    <p class="t-zh hdesc" style="font-family:'Noto Serif TC',serif">專為東伊豆・伊豆半島的民宿、Guest House、旅館提供清潔服務。<br/>從退房到入住，我們將每個房間還原為「迎賓的空間」。</p>
-    <p class="t-en hdesc">Specialized cleaning for guesthouses, B&amp;Bs and ryokan across the Izu Peninsula.<br/>From checkout to check-in, we prepare every room to welcome your next guest.</p>
+    <p class="t-ja hdesc">東伊豆・伊豆半島、そして京都エリアの民宿・ゲストハウス・旅館を専門とした清掃サービスです。<br/>護持株式会社がチェックアウトからチェックインまで、お部屋を「迎える空間」に整えます。</p>
+    <p class="t-zh hdesc" style="font-family:'Noto Serif TC',serif">護持株式會社專為東伊豆・伊豆半島及京都地區的民宿、Guest House、旅館提供清潔服務。<br/>從退房到入住，我們將每個房間還原為「迎賓的空間」。</p>
+    <p class="t-en hdesc">GOJI Co., Ltd. provides specialized cleaning services for guesthouses, B&amp;Bs and ryokan across the Izu Peninsula and Kyoto region.<br/>From checkout to check-in, every room is prepared to welcome your next guest.</p>
     <div class="hbtns">
       <a href="#contact" class="bpri"><span class="t-ja">無料で相談する</span><span class="t-zh">免費諮詢</span><span class="t-en">Get a Free Quote</span></a>
       <a href="#services" class="bgh"><span class="t-ja">サービス一覧</span><span class="t-zh">服務項目</span><span class="t-en">Our Services</span></a>
     </div>
     <div class="hstats">
-      <div><div class="sn">300<span style="font-size:1.2rem">+</span></div><div class="sl t-ja">対応施設数</div><div class="sl t-zh">服務設施數</div><div class="sl t-en">Properties Served</div></div>
-      <div><div class="sn">4<span style="font-size:1.2rem;font-family:'Noto Sans JP'">年</span></div><div class="sl t-ja">の実績</div><div class="sl t-zh">年豐富經驗</div><div class="sl t-en">Years Experience</div></div>
-      <div><div class="sn">98<span style="font-size:1.2rem">%</span></div><div class="sl t-ja">顧客満足度</div><div class="sl t-zh">客戶滿意度</div><div class="sl t-en">Satisfaction Rate</div></div>
+      <div><div class="sn">300<span style="font-size:1.1rem">+</span></div><div class="sl t-ja">対応施設数</div><div class="sl t-zh">服務設施數</div><div class="sl t-en">Properties Served</div></div>
+      <div><div class="sn">4<span style="font-size:1rem;font-family:'Noto Sans JP'">年</span></div><div class="sl t-ja">の実績</div><div class="sl t-zh">年豐富經驗</div><div class="sl t-en">Years Experience</div></div>
+      <div><div class="sn">98<span style="font-size:1rem">%</span></div><div class="sl t-ja">顧客満足度</div><div class="sl t-zh">客戶滿意度</div><div class="sl t-en">Satisfaction Rate</div></div>
     </div>
   </div>
-  <svg class="hwave" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,45 C360,90 720,0 1080,45 C1260,68 1380,35 1440,45 L1440,90 L0,90 Z" fill="#FAF8F5"/></svg>
+
+  <div class="hero-right">
+    <div class="hphoto"><canvas id="c-hero1"></canvas><div class="hphoto-label t-ja">客室清掃の様子</div><div class="hphoto-label t-zh" style="display:none">客房清掃現場</div><div class="hphoto-label t-en" style="display:none">Room Cleaning</div></div>
+    <div class="hphoto"><canvas id="c-hero2"></canvas><div class="hphoto-label t-ja">ベッドメイキング</div></div>
+    <div class="hphoto"><canvas id="c-hero3"></canvas><div class="hphoto-label t-ja">浴室清掃</div></div>
+  </div>
+
+  <svg class="hwave" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,28 1440,40 L1440,80 L0,80 Z" fill="#FAF8F5"/></svg>
 </section>
+
+<!-- AREA BANNER -->
+<section id="area">
+  <div class="area-text">
+    <h2 class="t-ja">護持株式会社の対応エリア</h2>
+    <h2 class="t-zh" style="font-family:'Noto Serif TC',serif;font-size:clamp(1.3rem,2.8vw,1.9rem);color:#fff;margin-bottom:.5rem">護持株式會社服務地區</h2>
+    <h2 class="t-en" style="font-family:'DM Serif Display',serif;font-size:clamp(1.3rem,2.8vw,1.9rem);font-weight:400;color:#fff;margin-bottom:.5rem">護持株式会社 Service Areas</h2>
+    <p class="t-ja">東伊豆・伊豆半島エリアに加え、2024年より<strong style="color:#fff">京都エリアでのサービスを開始</strong>しました。</p>
+    <p class="t-zh" style="font-family:'Noto Serif TC',serif">東伊豆・伊豆半島地區之外，自2024年起<strong style="color:#fff">新增京都地區服務</strong>。</p>
+    <p class="t-en">In addition to the Izu Peninsula, GOJI Co., Ltd. now <strong style="color:#fff">serves the Kyoto region from 2024.</strong></p>
+  </div>
+  <div class="area-chips">
+    <div class="chip">📍 <span>東伊豆町</span></div>
+    <div class="chip">📍 <span class="t-ja">伊豆半島全域</span><span class="t-zh">伊豆半島全區</span><span class="t-en">Izu Peninsula</span></div>
+    <div class="chip">📍 <span>静岡県</span></div>
+    <div class="chip chip-new">📍 <span class="t-ja">京都エリア</span><span class="t-zh">京都地區</span><span class="t-en">Kyoto Area</span> <span class="chip-badge t-ja">NEW</span><span class="chip-badge t-zh">新</span><span class="chip-badge t-en">NEW</span></div>
+  </div>
+</section>
+
+<!-- PHOTO STRIP 1 -->
+<div class="photo-strip cols3">
+  <div class="pstrip-item"><canvas id="c-strip1"></canvas><div class="pstrip-caption t-ja">旅館客室 — 清掃後の仕上がり<span>東伊豆エリア対応</span></div><div class="pstrip-caption t-zh" style="display:none">旅館客房 — 清掃完成<span>東伊豆地區</span></div></div>
+  <div class="pstrip-item"><canvas id="c-strip2"></canvas><div class="pstrip-caption t-ja">アメニティ補充・セッティング<span>護持株式会社のこだわり</span></div></div>
+  <div class="pstrip-item"><canvas id="c-strip3"></canvas><div class="pstrip-caption t-ja">京都 町家ゲストハウス清掃<span>2024年より対応開始</span></div></div>
+</div>
 
 <!-- WHY -->
 <section id="why" class="sec sec-w">
-  <div class="slabel"><span class="t-ja">選ばれる理由</span><span class="t-zh">為何選擇我們</span><span class="t-en">Why GOJI</span></div>
-  <h2 class="t-ja stitle rv">民宿オーナーに選ばれる4つの理由</h2>
-  <h2 class="t-zh stitle-z rv" >民宿業主選擇我們的4個理由</h2>
-  <h2 class="t-en stitle-e rv">4 Reasons Hosts Choose GOJI</h2>
-  <p class="ssub t-ja">Why Guesthouse Owners Trust Us</p>
+  <div class="slabel"><span class="t-ja">選ばれる理由</span><span class="t-zh">為何選擇我們</span><span class="t-en">Why 護持株式会社</span></div>
+  <h2 class="t-ja stitle rv">護持株式会社が選ばれる4つの理由</h2>
+  <h2 class="t-zh stitle-z rv">護持株式會社獲信任的4個理由</h2>
+  <h2 class="t-en stitle-e rv">4 Reasons Hosts Choose 護持株式会社</h2>
+  <p class="ssub t-ja">Why Guesthouse Owners Trust GOJI Co., Ltd.</p>
   <div class="why-g">
     <div class="wc rv"><div class="wi">⚡</div>
       <div class="t-ja wt">スピーディーな対応</div><div class="t-zh wtz">快速響應</div><div class="t-en wte">Fast Response</div>
-      <p class="t-ja wd">チェックアウト後2時間以内に清掃完了。連泊・繁忙期でも柔軟に対応し、次のゲストを笑顔でお迎えできる状態を整えます。</p>
-      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">退房後2小時內完成清掃。連住旺季也能靈活應對，確保下位房客順利入住。</p>
+      <p class="t-ja wd">チェックアウト後2時間以内に清掃完了。護持株式会社は連泊・繁忙期でも柔軟に対応し、次のゲストを笑顔でお迎えできる状態を整えます。</p>
+      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">退房後2小時內完成清掃。護持株式會社在旺季也能靈活應對，確保下位房客順利入住。</p>
       <p class="t-en wd">Rooms cleaned within 2 hours of checkout. Flexible even during peak seasons so your next guest always arrives to a perfect room.</p>
     </div>
     <div class="wc rv"><div class="wi">🌿</div>
       <div class="t-ja wt">品質の一貫性</div><div class="t-zh wtz">品質一致性</div><div class="t-en wte">Consistent Quality</div>
-      <p class="t-ja wd">独自のチェックリストと品質管理システムで、スタッフが変わっても同じ高水準を維持。オーナーの不安をゼロにします。</p>
-      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">採用獨自的檢查清單與品管系統，即便人員更換，服務品質始終如一。</p>
+      <p class="t-ja wd">独自のチェックリストと品質管理システムで、スタッフが変わっても同じ高水準を維持。護持株式会社のオーナーへの安心をお約束します。</p>
+      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">採用獨自的檢查清單與品管系統，即便人員更換，護持株式會社的服務品質始終如一。</p>
       <p class="t-en wd">Our proprietary checklists and QC system ensure the same high standard every time, regardless of which staff member cleans.</p>
     </div>
     <div class="wc rv"><div class="wi">📋</div>
       <div class="t-ja wt">オーナー目線の管理</div><div class="t-zh wtz">站在業主角度</div><div class="t-en wte">Owner-First Mindset</div>
-      <p class="t-ja wd">清掃後は写真付きで完了報告。備品の消耗・設備の不具合も即報告するので、オーナー不在でも安心です。</p>
-      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">清掃完成後附照片回報。備品耗盡或設施故障，即時通知業主，讓您不在場也能放心。</p>
-      <p class="t-en wd">Photo reports after every clean. We immediately flag supply shortages or maintenance issues so you stay in control remotely.</p>
+      <p class="t-ja wd">清掃後は写真付きで完了報告。護持株式会社のスタッフが備品の消耗・設備不具合も即報告するので、オーナー不在でも安心です。</p>
+      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">清掃完成後附照片回報。護持株式會社的員工即時通知備品耗盡或設施故障。</p>
+      <p class="t-en wd">Photo reports after every clean. GOJI Co., Ltd. staff immediately flag supply shortages or maintenance issues so you stay in control remotely.</p>
     </div>
     <div class="wc rv"><div class="wi">🔒</div>
       <div class="t-ja wt">信頼とセキュリティ</div><div class="t-zh wtz">信賴與安全</div><div class="t-en wte">Trust &amp; Security</div>
-      <p class="t-ja wd">全スタッフに身元確認・個人情報保護教育を実施。鍵の管理ルールも徹底し、ゲストのプライバシーを守ります。</p>
-      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">所有員工均經身份審查並接受個資保護培訓，嚴格的鑰匙管理規範保護每位房客的隱私。</p>
-      <p class="t-en wd">All staff are background-checked and trained in privacy protection. Strict key management protocols keep your guests safe.</p>
+      <p class="t-ja wd">護持株式会社の全スタッフに身元確認・個人情報保護教育を実施。鍵の管理ルールも徹底し、ゲストのプライバシーを守ります。</p>
+      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">護持株式會社所有員工均經身份審查並接受個資保護培訓，嚴格的鑰匙管理規範保護每位房客隱私。</p>
+      <p class="t-en wd">All GOJI Co., Ltd. staff are background-checked and trained in privacy protection. Strict key management protocols keep your guests safe.</p>
     </div>
   </div>
 </section>
@@ -295,13 +383,14 @@
 <!-- SERVICES -->
 <section id="services" class="sec sec-c">
   <div class="slabel"><span class="t-ja">サービス内容</span><span class="t-zh">服務項目</span><span class="t-en">Our Services</span></div>
-  <h2 class="t-ja stitle rv">民宿に特化した清掃メニュー</h2>
-  <h2 class="t-zh stitle-z rv">專為民宿設計的清潔方案</h2>
-  <h2 class="t-en stitle-e rv">Cleaning Services Built for Guesthouses</h2>
-  <p class="ssub t-ja">Full-Range Cleaning Menu</p>
+  <h2 class="t-ja stitle rv">護持株式会社の清掃メニュー</h2>
+  <h2 class="t-zh stitle-z rv">護持株式會社清潔方案</h2>
+  <h2 class="t-en stitle-e rv">護持株式会社 Service Menu</h2>
+  <p class="ssub t-ja">民宿・旅館・ゲストハウスに特化した全6メニュー</p>
   <div class="srv-g">
 
     <div class="sc rv">
+      <div class="sc-img"><canvas id="c-s1"></canvas></div>
       <div class="sh"><div class="se">🛏️</div><div>
         <div class="t-ja sn2">客室清掃・ベッドメイキング</div>
         <div class="t-zh sn2z">客房清掃・鋪床整理</div>
@@ -309,9 +398,9 @@
         <div class="snen">Standard Room Service</div>
       </div></div>
       <div class="sb">
-        <p class="t-ja sd">床・窓・家具の拭き掃除から、ベッドリネンの交換・整頓まで。枕の向き、スリッパの整列まで細部にこだわり、ゲストが気持ちよく過ごせる空間を仕上げます。</p>
-        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">從地板、窗戶、家具擦拭到床單更換整理，連枕頭方向、拖鞋擺放都不馬虎，每個細節用心對待。</p>
-        <p class="t-en sd">Thorough dusting, wiping and linen changes. We obsess over every detail — pillow alignment, slipper placement — so guests feel truly welcomed.</p>
+        <p class="t-ja sd">護持株式会社のスタッフが床・窓・家具の拭き掃除から、ベッドリネンの交換・整頓まで丁寧に対応。枕の向き、スリッパの整列まで細部にこだわります。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">護持株式會社的員工從地板、窗戶、家具擦拭到床單更換整理，連枕頭方向、拖鞋擺放都不馬虎。</p>
+        <p class="t-en sd">GOJI Co., Ltd. staff handle thorough dusting, wiping and linen changes. We obsess over every detail — pillow alignment, slipper placement — so guests feel truly welcomed.</p>
         <div class="tags">
           <span class="tag t-ja">ベッドメイキング</span><span class="tag t-zh">鋪床整理</span><span class="tag t-en">Bed Making</span>
           <span class="tag t-ja">拭き掃除</span><span class="tag t-zh">擦拭清潔</span><span class="tag t-en">Surface Wipe</span>
@@ -321,6 +410,7 @@
     </div>
 
     <div class="sc rv">
+      <div class="sc-img"><canvas id="c-s2"></canvas></div>
       <div class="sh"><div class="se">🧴</div><div>
         <div class="t-ja sn2">アメニティ補充・セッティング</div>
         <div class="t-zh sn2z">備品補充・陳設</div>
@@ -328,9 +418,9 @@
         <div class="snen">Setup &amp; Staging</div>
       </div></div>
       <div class="sb">
-        <p class="t-ja sd">シャンプー・石鹸・タオルなどを規定の位置に補充・陳列。残量チェックも行いオーナーに即報告します。ウェルカムドリンクの準備も対応可能です。</p>
-        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">洗髮精、肥皂、毛巾等備品依規定位置補充陳設，隨時核查庫存並即時通知業主。可協助準備迎賓飲品。</p>
-        <p class="t-en sd">Restocking all amenities in their designated spots. We track inventory and alert you before you run out. Welcome drink prep on request.</p>
+        <p class="t-ja sd">シャンプー・石鹸・タオルなどを規定の位置に補充・陳列。護持株式会社が残量チェックも行い、在庫切れをオーナーに即報告します。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">洗髮精、肥皂、毛巾等備品依規定位置補充陳設。護持株式會社隨時核查庫存並即時通知業主。</p>
+        <p class="t-en sd">GOJI Co., Ltd. restocks all amenities in their designated spots and tracks inventory, alerting you before you run out. Welcome drink prep on request.</p>
         <div class="tags">
           <span class="tag t-ja">タオル整理</span><span class="tag t-zh">毛巾整理</span><span class="tag t-en">Towel Folding</span>
           <span class="tag t-ja">在庫管理</span><span class="tag t-zh">庫存管理</span><span class="tag t-en">Inventory</span>
@@ -340,6 +430,7 @@
     </div>
 
     <div class="sc rv">
+      <div class="sc-img"><canvas id="c-s3"></canvas></div>
       <div class="sh"><div class="se">🚿</div><div>
         <div class="t-ja sn2">浴室・トイレ清掃</div>
         <div class="t-zh sn2z">浴室・廁所清潔</div>
@@ -347,9 +438,9 @@
         <div class="snen">Deep Sanitation</div>
       </div></div>
       <div class="sb">
-        <p class="t-ja sd">浴槽・シャワー・洗面台・鏡・便器を徹底除菌。カビや水垢を残さない仕上げで、清潔感あふれる水回りを実現します。</p>
-        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">浴缸、淋浴間、洗手台、鏡面、馬桶全面消毒清掃，去除黴菌與水垢，打造潔淨舒適的衛浴空間。</p>
-        <p class="t-en sd">Deep sanitizing of tub, shower, basin, mirror and toilet. We eliminate mold and limescale for bathrooms guests rave about in reviews.</p>
+        <p class="t-ja sd">浴槽・シャワー・洗面台・鏡・便器を護持株式会社が徹底除菌。カビや水垢を残さない仕上げで清潔感あふれる水回りを実現します。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">護持株式會社對浴缸、淋浴間、洗手台、鏡面、馬桶全面消毒清掃，去除黴菌與水垢。</p>
+        <p class="t-en sd">GOJI Co., Ltd. deep sanitizes tub, shower, basin, mirror and toilet. We eliminate mold and limescale for bathrooms guests rave about in reviews.</p>
         <div class="tags">
           <span class="tag t-ja">除菌</span><span class="tag t-zh">消毒殺菌</span><span class="tag t-en">Sanitizing</span>
           <span class="tag t-ja">カビ防止</span><span class="tag t-zh">防黴處理</span><span class="tag t-en">Mold Prevention</span>
@@ -359,6 +450,7 @@
     </div>
 
     <div class="sc rv">
+      <div class="sc-img"><canvas id="c-s4"></canvas></div>
       <div class="sh"><div class="se">🏨</div><div>
         <div class="t-ja sn2">共用エリア清掃</div>
         <div class="t-zh sn2z">公共區域清潔</div>
@@ -366,9 +458,9 @@
         <div class="snen">Lobby · Hallway · Kitchen</div>
       </div></div>
       <div class="sb">
-        <p class="t-ja sd">ロビー・廊下・共用キッチン・ダイニングを毎日清潔に。施設全体の第一印象を高め、リピーターにも選ばれる宿を実現します。</p>
-        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">大廳、走廊、公共廚房、餐廳每日清潔維護，提升整體第一印象，讓房客回訪率顯著提升。</p>
-        <p class="t-en sd">Daily cleaning of lobby, hallways, shared kitchen and dining. A spotless common area lifts your property's first impression and keeps guests returning.</p>
+        <p class="t-ja sd">ロビー・廊下・共用キッチン・ダイニングを護持株式会社が毎日清潔に維持。施設全体の第一印象を高め、リピーターに選ばれる宿を実現します。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">護持株式會社每日清潔維護大廳、走廊、公共廚房、餐廳，提升整體第一印象。</p>
+        <p class="t-en sd">GOJI Co., Ltd. provides daily cleaning of lobby, hallways, shared kitchen and dining. A spotless common area lifts your property's first impression.</p>
         <div class="tags">
           <span class="tag t-ja">ロビー</span><span class="tag t-zh">大廳</span><span class="tag t-en">Lobby</span>
           <span class="tag t-ja">共用キッチン</span><span class="tag t-zh">公共廚房</span><span class="tag t-en">Shared Kitchen</span>
@@ -378,6 +470,7 @@
     </div>
 
     <div class="sc rv">
+      <div class="sc-img"><canvas id="c-s5"></canvas></div>
       <div class="sh"><div class="se">🔄</div><div>
         <div class="t-ja sn2">リネン交換・洗濯サービス</div>
         <div class="t-zh sn2z">床單更換・洗衣服務</div>
@@ -385,9 +478,9 @@
         <div class="snen">Full Textile Care</div>
       </div></div>
       <div class="sb">
-        <p class="t-ja sd">シーツ・枕カバー・タオル類の回収・洗濯・アイロン仕上げから補充まで一括対応。ランドリー管理の手間をゼロにします。</p>
-        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">床單、枕套、毛巾的回收、清洗、燙平到補充，一條龍服務，讓業主省去布草管理的煩惱。</p>
-        <p class="t-en sd">Full linen cycle: collect, wash, iron and replace sheets, pillowcases and towels. Zero laundry hassle for property owners.</p>
+        <p class="t-ja sd">シーツ・枕カバー・タオル類の回収・洗濯・アイロン仕上げから補充まで護持株式会社が一括対応。ランドリー管理の手間をゼロにします。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">護持株式會社一條龍提供床單、枕套、毛巾的回收、清洗、燙平到補充服務。</p>
+        <p class="t-en sd">GOJI Co., Ltd. handles the full linen cycle: collect, wash, iron and replace sheets, pillowcases and towels. Zero laundry hassle for owners.</p>
         <div class="tags">
           <span class="tag t-ja">シーツ交換</span><span class="tag t-zh">床單更換</span><span class="tag t-en">Sheet Change</span>
           <span class="tag t-ja">洗濯・乾燥</span><span class="tag t-zh">洗滌乾燥</span><span class="tag t-en">Wash &amp; Dry</span>
@@ -397,6 +490,7 @@
     </div>
 
     <div class="sc rv">
+      <div class="sc-img"><canvas id="c-s6"></canvas></div>
       <div class="sh"><div class="se">🌸</div><div>
         <div class="t-ja sn2">定期大掃除・特別清掃</div>
         <div class="t-zh sn2z">定期大掃除・特殊清潔</div>
@@ -404,9 +498,9 @@
         <div class="snen">Seasonal &amp; Move-Out</div>
       </div></div>
       <div class="sb">
-        <p class="t-ja sd">季節の変わり目や繁忙期前の徹底的な大掃除に対応。エアコンフィルター洗浄・窓サッシ・換気扇など、日常清掃では手が届かない箇所まで仕上げます。</p>
-        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">季節交替或旺季前的全面大掃除。冷氣濾網清洗、窗框軌道、抽油煙機等日常難以兼顧的部位，徹底清潔。</p>
-        <p class="t-en sd">Seasonal deep cleans before busy periods. Air-con filters, window tracks, exhaust fans — all the spots regular cleaning misses.</p>
+        <p class="t-ja sd">季節の変わり目や繁忙期前の徹底清掃に護持株式会社が対応。エアコンフィルター・窓サッシ・換気扇など日常清掃では手が届かない箇所まで仕上げます。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">護持株式會社在季節交替或旺季前進行全面大掃除，冷氣濾網、窗框軌道、抽油煙機等徹底清潔。</p>
+        <p class="t-en sd">GOJI Co., Ltd. handles seasonal deep cleans before busy periods. Air-con filters, window tracks, exhaust fans — all the spots regular cleaning misses.</p>
         <div class="tags">
           <span class="tag t-ja">エアコン清掃</span><span class="tag t-zh">冷氣清洗</span><span class="tag t-en">AC Filter Clean</span>
           <span class="tag t-ja">窓・サッシ</span><span class="tag t-zh">窗戶清潔</span><span class="tag t-en">Window &amp; Tracks</span>
@@ -418,37 +512,43 @@
   </div>
 </section>
 
+<!-- PHOTO STRIP 2 -->
+<div class="photo-strip cols2">
+  <div class="pstrip-item"><canvas id="c-strip4"></canvas><div class="pstrip-caption t-ja">京都エリア — 護持株式会社が2024年より対応<span>町家・ゲストハウス・旅館の清掃</span></div><div class="pstrip-caption t-zh" style="display:none">京都地區 — 護持株式會社2024年起服務<span>町家・民宿・旅館清掃</span></div></div>
+  <div class="pstrip-item"><canvas id="c-strip5"></canvas><div class="pstrip-caption t-ja">護持株式会社の清掃品質管理<span>写真付き完了レポートで安心のサポート</span></div><div class="pstrip-caption t-zh" style="display:none">護持株式會社的清掃品質管理<span>附照片完成回報，讓業主放心</span></div></div>
+</div>
+
 <!-- FLOW -->
 <section id="flow" class="sec sec-w">
   <div class="slabel"><span class="t-ja">ご利用の流れ</span><span class="t-zh">服務流程</span><span class="t-en">How It Works</span></div>
-  <h2 class="t-ja stitle rv">簡単4ステップで、すぐにスタート</h2>
-  <h2 class="t-zh stitle-z rv">簡單4步驟，馬上開始</h2>
-  <h2 class="t-en stitle-e rv">Up and Running in 4 Simple Steps</h2>
-  <p class="ssub t-ja">Simple Onboarding Process</p>
+  <h2 class="t-ja stitle rv">護持株式会社をご利用いただく流れ</h2>
+  <h2 class="t-zh stitle-z rv">護持株式會社服務流程</h2>
+  <h2 class="t-en stitle-e rv">Getting Started with 護持株式会社</h2>
+  <p class="ssub t-ja">Simple Onboarding — 4 Steps</p>
   <div class="flow-g">
     <div class="fs rv"><div class="fn">01</div><div class="fi">📩</div>
       <div class="t-ja ft2">お問い合わせ</div><div class="t-zh ft2z">聯絡詢問</div><div class="t-en ft2e">Inquiry</div>
-      <p class="t-ja fd">フォームまたはお電話にてお気軽にご連絡ください。</p>
-      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">透過表單或電話與我們聯絡。</p>
-      <p class="t-en fd">Reach out via our contact form or phone.</p>
+      <p class="t-ja fd">フォームまたはお電話にて護持株式会社へお気軽にご連絡ください。</p>
+      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">透過表單或電話與護持株式會社聯絡。</p>
+      <p class="t-en fd">Reach out to GOJI Co., Ltd. via our contact form or phone.</p>
     </div>
     <div class="fs rv"><div class="fn">02</div><div class="fi">🏠</div>
       <div class="t-ja ft2">現地確認・お見積もり</div><div class="t-zh ft2z">現場確認・報價</div><div class="t-en ft2e">Site Visit &amp; Quote</div>
-      <p class="t-ja fd">施設を拝見し、最適なプランと料金をご提案します。</p>
-      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">實地了解您的設施，提供最適合的方案與報價。</p>
-      <p class="t-en fd">We visit your property and propose the best plan and pricing.</p>
+      <p class="t-ja fd">護持株式会社のスタッフが施設を拝見し、最適なプランと料金をご提案します。</p>
+      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">護持株式會社員工實地了解您的設施，提供最適合的方案與報價。</p>
+      <p class="t-en fd">GOJI Co., Ltd. staff visit your property and propose the best plan and pricing.</p>
     </div>
     <div class="fs rv"><div class="fn">03</div><div class="fi">📝</div>
       <div class="t-ja ft2">契約・スケジュール設定</div><div class="t-zh ft2z">簽約・排程安排</div><div class="t-en ft2e">Contract &amp; Scheduling</div>
-      <p class="t-ja fd">ご予約カレンダーと連携し、清掃スケジュールを自動調整。</p>
-      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">與預約行事曆整合，自動調整清掃排程。</p>
-      <p class="t-en fd">We sync with your booking calendar to auto-schedule every clean.</p>
+      <p class="t-ja fd">予約カレンダーと連携し、護持株式会社が清掃スケジュールを自動調整します。</p>
+      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">與預約行事曆整合，護持株式會社自動調整清掃排程。</p>
+      <p class="t-en fd">GOJI Co., Ltd. syncs with your booking calendar to auto-schedule every clean.</p>
     </div>
     <div class="fs rv"><div class="fn">04</div><div class="fi">✨</div>
-      <div class="t-ja ft2">清掃スタート・完了報告</div><div class="t-zh ft2z">開始清掃・完成回報</div><div class="t-en ft2e">Clean &amp; Report</div>
-      <p class="t-ja fd">清掃完了後、写真付きで報告。安心してゲストをお迎えください。</p>
-      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">清掃完成後附上照片回報，讓您安心迎接每位房客。</p>
-      <p class="t-en fd">After every clean you receive a photo report. Welcome your guests with confidence.</p>
+      <div class="t-ja ft2">清掃・完了報告</div><div class="t-zh ft2z">清掃・完成回報</div><div class="t-en ft2e">Clean &amp; Report</div>
+      <p class="t-ja fd">護持株式会社が清掃後に写真付きレポートをお送りします。安心してゲストをお迎えください。</p>
+      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">護持株式會社清掃後附上照片回報。安心迎接每位房客。</p>
+      <p class="t-en fd">After every clean GOJI Co., Ltd. sends a photo report. Welcome your guests with confidence.</p>
     </div>
   </div>
 </section>
@@ -458,9 +558,9 @@
   <div class="co-g">
     <div>
       <div class="slabel"><span class="t-ja">会社概要</span><span class="t-zh">公司概要</span><span class="t-en">Company Profile</span></div>
-      <h2 class="t-ja stitle rv">護持株式会社</h2>
-      <h2 class="t-zh stitle-z rv">護持株式會社</h2>
-      <h2 class="t-en stitle-e rv">GOJI Co., Ltd.</h2>
+      <h2 class="t-ja stitle rv">護持株式会社について</h2>
+      <h2 class="t-zh stitle-z rv">關於護持株式會社</h2>
+      <h2 class="t-en stitle-e rv">About 護持株式会社</h2>
       <p class="ssub">goji-shogon.jp</p>
       <table class="co-t">
         <tr>
@@ -490,20 +590,24 @@
         <tr>
           <th><span class="t-ja">対応エリア</span><span class="t-zh">服務地區</span><span class="t-en">Service Area</span></th>
           <td>
-            <span class="t-ja">東伊豆町・伊豆半島全域</span>
-            <span class="t-zh" style="font-family:'Noto Serif TC',serif">東伊豆町・伊豆半島全區</span>
-            <span class="t-en">Higashi-Izu &amp; entire Izu Peninsula</span>
+            <span class="t-ja">東伊豆町・伊豆半島全域・<strong>京都エリア</strong></span>
+            <span class="t-zh" style="font-family:'Noto Serif TC',serif">東伊豆町・伊豆半島全區・<strong>京都地區</strong></span>
+            <span class="t-en">Higashi-Izu, Izu Peninsula &amp; <strong>Kyoto Area</strong></span>
           </td>
         </tr>
       </table>
     </div>
     <div class="co-v rv">
+      <div class="cv-goji">GOJI</div>
       <div class="cv-domain">goji-shogon.jp</div>
+      <div class="cv-company t-ja">護持株式会社</div>
+      <div class="cv-company t-zh" style="font-family:'Noto Serif TC',serif">護持株式會社</div>
       <div class="t-ja cv-tag-j">「清潔」という名のおもてなしを、届ける。</div>
       <div class="t-zh cv-tag-z">以「清潔」之名，傳遞款待的心意。</div>
       <div class="t-en cv-tag-e">Delivering hospitality<br/>through the art of clean.</div>
       <div class="cv-list">
         <div class="cv-item"><span class="t-ja">東伊豆・伊豆半島エリア対応</span><span class="t-zh" style="font-family:'Noto Serif TC',serif">東伊豆・伊豆半島地區服務</span><span class="t-en">Serving Izu Peninsula &amp; surroundings</span></div>
+        <div class="cv-item"><span class="t-ja">京都エリア対応（2024年〜）</span><span class="t-zh" style="font-family:'Noto Serif TC',serif">京都地區服務（2024年起）</span><span class="t-en">Kyoto Area service (from 2024)</span></div>
         <div class="cv-item"><span class="t-ja">民宿・旅館・ゲストハウス専門</span><span class="t-zh" style="font-family:'Noto Serif TC',serif">民宿・旅館・Guest House 專業服務</span><span class="t-en">Guesthouse &amp; Ryokan specialists</span></div>
         <div class="cv-item"><span class="t-ja">写真付き清掃完了レポート</span><span class="t-zh" style="font-family:'Noto Serif TC',serif">清掃完成附照片回報</span><span class="t-en">Photo completion reports every time</span></div>
         <div class="cv-item"><span class="t-ja">令和2年設立・地域に根ざした会社</span><span class="t-zh" style="font-family:'Noto Serif TC',serif">令和2年創立・深耕在地</span><span class="t-en">Founded 2020 · locally rooted company</span></div>
@@ -515,18 +619,18 @@
 <!-- CONTACT -->
 <section id="contact">
   <div class="slabel"><span class="t-ja">お問い合わせ</span><span class="t-zh">聯絡我們</span><span class="t-en">Contact</span></div>
-  <h2 class="t-ja stitle rv">まずはお気軽にご相談ください</h2>
-  <h2 class="t-zh stitle-z rv">歡迎隨時與我們洽談</h2>
-  <h2 class="t-en stitle-e rv">Let's Talk — No Pressure</h2>
-  <p class="ssub t-ja">Free Consultation Available</p>
+  <h2 class="t-ja stitle rv">護持株式会社へのお問い合わせ</h2>
+  <h2 class="t-zh stitle-z rv">聯絡護持株式會社</h2>
+  <h2 class="t-en stitle-e rv">Contact 護持株式会社</h2>
+  <p class="ssub t-ja">まずはお気軽にご相談ください · goji-shogon.jp</p>
   <div class="ct-g">
     <div class="ci-list">
       <div class="ci-row"><div class="ci-ico">📍</div><div>
-        <div class="ci-ttl t-ja">所在地</div><div class="ci-ttl t-zh">所在地</div><div class="ci-ttl t-en">Location</div>
-        <div class="ci-val">〒413-0302<br/>静岡県賀茂郡東伊豆町奈良本3302番35</div>
+        <div class="ci-ttl t-ja">本社所在地</div><div class="ci-ttl t-zh">本社所在地</div><div class="ci-ttl t-en">Head Office</div>
+        <div class="ci-val">〒413-0302<br/>静岡県賀茂郡東伊豆町奈良本3302番35<br/><span style="color:var(--green2);font-size:.75rem" class="t-ja">（京都エリアのお問い合わせも承ります）</span><span style="color:var(--green2);font-size:.75rem" class="t-zh">（京都地區詢問亦可）</span><span style="color:var(--green2);font-size:.75rem" class="t-en">(Kyoto inquiries welcome)</span></div>
       </div></div>
       <div class="ci-row"><div class="ci-ico">🌐</div><div>
-        <div class="ci-ttl">Website</div>
+        <div class="ci-ttl t-ja">公式サイト</div><div class="ci-ttl t-zh">官方網站</div><div class="ci-ttl t-en">Official Website</div>
         <div class="ci-val">goji-shogon.jp</div>
       </div></div>
       <div class="ci-row"><div class="ci-ico">🕐</div><div>
@@ -537,13 +641,13 @@
       </div></div>
       <div class="ci-row"><div class="ci-ico">🏢</div><div>
         <div class="ci-ttl t-ja">法人番号</div><div class="ci-ttl t-zh">法人番號</div><div class="ci-ttl t-en">Corp. Number</div>
-        <div class="ci-val">1300-01-067987</div>
+        <div class="ci-val">1300-01-067987<br/><small style="font-size:.7rem;color:rgba(143,163,177,.6)">護持株式会社 / GOJI Co., Ltd.</small></div>
       </div></div>
     </div>
     <div class="fbox">
-      <div class="t-ja fbox-ttl">お問い合わせフォーム</div>
-      <div class="t-zh fbox-ttlz">聯絡表單</div>
-      <div class="t-en fbox-ttle">Send Us a Message</div>
+      <div class="t-ja fbox-ttl">護持株式会社へのお問い合わせフォーム</div>
+      <div class="t-zh fbox-ttlz">護持株式會社聯絡表單</div>
+      <div class="t-en fbox-ttle">Contact GOJI Co., Ltd.</div>
       <div class="f-row2">
         <div class="fg">
           <label><span class="t-ja">お名前</span><span class="t-zh">姓名</span><span class="t-en">Name</span></label>
@@ -563,9 +667,18 @@
         <input type="text" id="f-prop" placeholder="〇〇 旅館 / Guest House"/>
       </div>
       <div class="fg">
+        <label><span class="t-ja">エリア</span><span class="t-zh">地區</span><span class="t-en">Area</span></label>
+        <select id="f-area">
+          <option value=""><span class="t-ja">エリアを選択</span></option>
+          <option class="t-ja">東伊豆・伊豆半島</option>
+          <option class="t-ja">京都エリア</option>
+          <option class="t-ja">その他・ご相談</option>
+        </select>
+      </div>
+      <div class="fg">
         <label><span class="t-ja">ご希望サービス</span><span class="t-zh">希望服務</span><span class="t-en">Service Needed</span></label>
         <select id="f-svc">
-          <option value=""><span class="t-ja">選択してください</span></option>
+          <option value="">---</option>
           <option>客室清掃・ベッドメイキング</option>
           <option>アメニティ補充・セッティング</option>
           <option>浴室・トイレ清掃</option>
@@ -580,7 +693,7 @@
         <textarea id="f-msg" placeholder="..."></textarea>
       </div>
       <button class="bsub" id="sendBtn" onclick="submitForm()">
-        <span class="t-ja">送信する</span><span class="t-zh">送出</span><span class="t-en">Send Message</span>
+        <span class="t-ja">護持株式会社に送信する</span><span class="t-zh">送出至護持株式會社</span><span class="t-en">Send to GOJI Co., Ltd.</span>
       </button>
     </div>
   </div>
@@ -591,14 +704,14 @@
     <div class="ft-brand">
       <div class="fe">GO<span>JI</span> Co., Ltd.</div>
       <div class="fj">護持株式会社</div>
-      <div class="fd2">goji-shogon.jp</div>
+      <div class="fd2">goji-shogon.jp · 護持株式会社公式サイト</div>
     </div>
     <div class="ft-info">
       〒413-0302 静岡県賀茂郡東伊豆町奈良本3302番35<br/>
       法人番号：1300-01-067987 ／ 設立：令和2年11月6日<br/>
-      <span class="t-ja">民宿・旅館・ゲストハウス専門清掃サービス</span>
-      <span class="t-zh" style="font-family:'Noto Serif TC',serif">民宿・旅館・Guest House 專業清掃服務</span>
-      <span class="t-en">Professional Cleaning for Guesthouses &amp; Ryokan</span>
+      <span class="t-ja">対応エリア：東伊豆・伊豆半島・京都 ／ 民宿・旅館・ゲストハウス専門清掃</span>
+      <span class="t-zh" style="font-family:'Noto Serif TC',serif">服務地區：東伊豆・伊豆半島・京都 ／ 民宿・旅館清掃</span>
+      <span class="t-en">Areas: Izu Peninsula &amp; Kyoto / Guesthouse &amp; Ryokan Cleaning</span>
     </div>
   </div>
   <div class="ft-bot">
@@ -617,17 +730,360 @@
 <div id="toast"></div>
 
 <script>
+/* ── Canvas illustration engine ── */
+function drawScene(id, type){
+  const canvas = document.getElementById(id);
+  if(!canvas) return;
+  const w = canvas.offsetWidth||canvas.parentElement.offsetWidth||400;
+  const h = canvas.offsetHeight||canvas.parentElement.offsetHeight||200;
+  canvas.width = w * (window.devicePixelRatio||1);
+  canvas.height = h * (window.devicePixelRatio||1);
+  const ctx = canvas.getContext('2d');
+  ctx.scale(window.devicePixelRatio||1, window.devicePixelRatio||1);
+
+  const scenes = {
+    /* Hero 1 — room cleaning overhead view */
+    hero1: (c,W,H)=>{
+      c.fillStyle='#1a2535'; c.fillRect(0,0,W,H);
+      /* floor */
+      c.fillStyle='#e8e0d4'; c.fillRect(20,H*.45,W-40,H*.5);
+      /* bed */
+      c.fillStyle='#f5f0eb'; c.fillRect(W*.1,H*.1,W*.55,H*.38);
+      c.fillStyle='#e8e2dc'; c.fillRect(W*.1,H*.1,W*.55,H*.08);
+      /* pillow */
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.15,H*.13,W*.12,H*.12,4); c.fill();
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.3,H*.13,W*.12,H*.12,4); c.fill();
+      /* blanket fold */
+      c.fillStyle='#d4cfc8'; c.fillRect(W*.1,H*.28,W*.55,H*.02);
+      /* staff silhouette */
+      c.fillStyle='#3D7A52';
+      c.beginPath(); c.arc(W*.82,H*.3,W*.06,0,Math.PI*2); c.fill();
+      c.fillStyle='#3D7A52';
+      c.fillRect(W*.77,H*.36,W*.1,H*.2);
+      /* arm reaching to bed */
+      c.strokeStyle='#3D7A52'; c.lineWidth=4; c.lineCap='round';
+      c.beginPath(); c.moveTo(W*.77,H*.42); c.lineTo(W*.55,H*.32); c.stroke();
+      /* sparkles */
+      c.fillStyle='rgba(90,158,111,.6)';
+      [[W*.6,H*.08],[W*.72,H*.18],[W*.85,H*.08]].forEach(([x,y])=>{
+        c.beginPath(); c.arc(x,y,2,0,Math.PI*2); c.fill();
+      });
+    },
+    /* Hero 2 — bed making close-up */
+    hero2: (c,W,H)=>{
+      c.fillStyle='#2a3545'; c.fillRect(0,0,W,H);
+      /* white sheet being spread */
+      c.fillStyle='#f8f5f0';
+      c.beginPath(); c.moveTo(0,H*.2); c.lineTo(W,H*.05); c.lineTo(W,H*.9); c.lineTo(0,H*.85); c.closePath(); c.fill();
+      /* sheet crease lines */
+      c.strokeStyle='rgba(200,195,188,.5)'; c.lineWidth=1;
+      for(let i=1;i<5;i++){
+        c.beginPath(); c.moveTo(0,H*.2+i*(H*.13)); c.lineTo(W,H*.05+i*(H*.17)); c.stroke();
+      }
+      /* hands smoothing */
+      c.fillStyle='#d4a888';
+      c.beginPath(); c.ellipse(W*.3,H*.55,W*.12,H*.06,-.2,0,Math.PI*2); c.fill();
+      c.beginPath(); c.ellipse(W*.65,H*.5,W*.12,H*.06,-.15,0,Math.PI*2); c.fill();
+      /* pillow being placed */
+      c.fillStyle='#fff'; c.shadowColor='rgba(0,0,0,.2)'; c.shadowBlur=8;
+      c.beginPath(); c.roundRect(W*.35,H*.1,W*.3,H*.18,6); c.fill();
+      c.shadowBlur=0;
+    },
+    /* Hero 3 — bathroom */
+    hero3: (c,W,H)=>{
+      c.fillStyle='#1e2d3a'; c.fillRect(0,0,W,H);
+      /* tiles */
+      c.fillStyle='#e8f0f0';
+      for(let x=0;x<W;x+=W*.18) for(let y=0;y<H*.65;y+=H*.18){
+        c.fillRect(x+1,y+1,W*.17-2,H*.17-2);
+      }
+      /* grout */
+      c.strokeStyle='#cdd8d8'; c.lineWidth=1;
+      for(let x=0;x<W;x+=W*.18){ c.beginPath(); c.moveTo(x,0); c.lineTo(x,H*.65); c.stroke(); }
+      for(let y=0;y<H*.65;y+=H*.18){ c.beginPath(); c.moveTo(0,y); c.lineTo(W,y); c.stroke(); }
+      /* mirror shine */
+      c.fillStyle='rgba(255,255,255,.08)';
+      c.fillRect(W*.15,H*.05,W*.3,H*.45);
+      c.strokeStyle='rgba(255,255,255,.2)'; c.lineWidth=2;
+      c.strokeRect(W*.15,H*.05,W*.3,H*.45);
+      /* spray bottle */
+      c.fillStyle='#3D7A52';
+      c.fillRect(W*.65,H*.25,W*.06,H*.28);
+      c.fillRect(W*.62,H*.25,W*.12,H*.05);
+      c.fillStyle='#2a5a3a'; c.fillRect(W*.65,H*.5,W*.06,H*.06);
+      /* cleaning cloth */
+      c.fillStyle='rgba(255,255,255,.75)';
+      c.beginPath(); c.ellipse(W*.75,H*.65,W*.12,H*.08,-.3,0,Math.PI*2); c.fill();
+      /* sparkle dots */
+      c.fillStyle='rgba(90,158,111,.7)';
+      [[W*.4,H*.15],[W*.5,H*.25],[W*.35,H*.3]].forEach(([x,y])=>{
+        c.beginPath(); c.arc(x,y,2.5,0,Math.PI*2); c.fill();
+      });
+    },
+    /* Strip 1 — tatami room after cleaning */
+    strip1: (c,W,H)=>{
+      c.fillStyle='#f0ebe3'; c.fillRect(0,0,W,H);
+      /* tatami mat pattern */
+      c.strokeStyle='#d4cbbf'; c.lineWidth=1;
+      for(let y=0;y<H;y+=H/6){ c.beginPath(); c.moveTo(0,y); c.lineTo(W,y); c.stroke(); }
+      for(let x=0;x<W;x+=W/4){ c.beginPath(); c.moveTo(x,0); c.lineTo(x,H); c.stroke(); }
+      /* window light */
+      const g = c.createLinearGradient(0,0,0,H);
+      g.addColorStop(0,'rgba(255,245,220,.6)'); g.addColorStop(1,'transparent');
+      c.fillStyle=g; c.fillRect(0,0,W*.4,H);
+      /* low table */
+      c.fillStyle='#5a3a1a'; c.fillRect(W*.3,H*.55,W*.4,H*.06);
+      c.fillStyle='#4a2e12'; c.fillRect(W*.32,H*.61,W*.04,H*.12);
+      c.fillRect(W*.64,H*.61,W*.04,H*.12);
+      /* tea set on table */
+      c.fillStyle='#2a1810'; c.beginPath(); c.arc(W*.5,H*.52,W*.04,0,Math.PI*2); c.fill();
+      c.fillStyle='#e8d5c0'; c.beginPath(); c.arc(W*.5,H*.52,W*.025,0,Math.PI*2); c.fill();
+      /* green accent */
+      c.fillStyle='rgba(61,122,82,.12)'; c.fillRect(0,0,W*.06,H);
+    },
+    /* Strip 2 — amenity tray */
+    strip2: (c,W,H)=>{
+      c.fillStyle='#2a3040'; c.fillRect(0,0,W,H);
+      /* marble counter */
+      c.fillStyle='#e8e4e0'; c.fillRect(0,H*.45,W,H*.55);
+      /* marble texture */
+      c.strokeStyle='rgba(200,195,190,.4)'; c.lineWidth=1;
+      for(let i=0;i<6;i++){
+        c.beginPath();
+        c.moveTo(Math.random()*W, H*.45);
+        c.bezierCurveTo(Math.random()*W,H*.6,Math.random()*W,H*.7,Math.random()*W,H);
+        c.stroke();
+      }
+      /* tray */
+      c.fillStyle='#c8a87a'; c.fillRect(W*.15,H*.42,W*.7,H*.04);
+      /* bottles */
+      [[W*.25,H*.2,'#3D7A52'],[W*.4,H*.28,'#5A9E6F'],[W*.55,H*.22,'#2a5a3a'],[W*.7,H*.26,'#3D7A52']].forEach(([x,y,col])=>{
+        c.fillStyle=col; c.beginPath(); c.roundRect(x-W*.04,y,W*.08,H*.22,4); c.fill();
+        c.fillStyle='rgba(255,255,255,.2)'; c.fillRect(x-W*.01,y+4,W*.015,H*.08);
+      });
+      /* folded towels */
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.08,H*.5,W*.2,H*.1,2); c.fill();
+      c.fillStyle='rgba(0,0,0,.06)'; c.fillRect(W*.08,H*.55,W*.2,H*.01);
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.08,H*.6,W*.2,H*.1,2); c.fill();
+    },
+    /* Strip 3 — Kyoto machiya */
+    strip3: (c,W,H)=>{
+      c.fillStyle='#1a1a2e'; c.fillRect(0,0,W,H);
+      /* sky */
+      const sky = c.createLinearGradient(0,0,0,H*.5);
+      sky.addColorStop(0,'#1a2035'); sky.addColorStop(1,'#2a3550');
+      c.fillStyle=sky; c.fillRect(0,0,W,H*.5);
+      /* machiya facade */
+      c.fillStyle='#2a2015'; c.fillRect(W*.1,H*.15,W*.8,H*.85);
+      /* wooden slats */
+      c.strokeStyle='#3a3020'; c.lineWidth=2;
+      for(let x=W*.1;x<W*.9;x+=W*.06){ c.beginPath(); c.moveTo(x,H*.15); c.lineTo(x,H); c.stroke(); }
+      /* windows */
+      [[W*.2,H*.25],[W*.5,H*.25],[W*.7,H*.25]].forEach(([x,y])=>{
+        c.fillStyle='rgba(255,220,150,.15)';
+        c.fillRect(x,y,W*.12,H*.18);
+        c.strokeStyle='#5a4a30'; c.lineWidth=1.5;
+        c.strokeRect(x,y,W*.12,H*.18);
+        /* shoji pattern */
+        c.strokeStyle='rgba(255,255,255,.1)'; c.lineWidth=0.5;
+        c.beginPath(); c.moveTo(x+W*.06,y); c.lineTo(x+W*.06,y+H*.18); c.stroke();
+        c.beginPath(); c.moveTo(x,y+H*.09); c.lineTo(x+W*.12,y+H*.09); c.stroke();
+      });
+      /* sign */
+      c.fillStyle='var(--green)'; c.fillStyle='#3D7A52';
+      c.fillRect(W*.35,H*.08,W*.3,H*.08);
+      c.fillStyle='#fff'; c.font=`bold ${W*.03}px 'Noto Serif JP',serif`;
+      c.textAlign='center'; c.fillText('護持株式会社',W*.5,H*.14);
+      /* lantern */
+      c.fillStyle='rgba(255,180,60,.3)';
+      c.beginPath(); c.ellipse(W*.5,H*.06,W*.03,H*.04,0,0,Math.PI*2); c.fill();
+    },
+    /* Strip 4 — Kyoto street with cleaned ryokan */
+    strip4: (c,W,H)=>{
+      c.fillStyle='#0d1520'; c.fillRect(0,0,W,H);
+      /* dawn sky gradient */
+      const dg = c.createLinearGradient(0,0,0,H*.6);
+      dg.addColorStop(0,'#1a2540'); dg.addColorStop(.6,'#2a3a55'); dg.addColorStop(1,'#3a4a65');
+      c.fillStyle=dg; c.fillRect(0,0,W,H*.6);
+      /* buildings silhouette */
+      c.fillStyle='#111820';
+      c.beginPath(); c.moveTo(0,H*.6); c.lineTo(W*.15,H*.2); c.lineTo(W*.3,H*.35); c.lineTo(W*.45,H*.15); c.lineTo(W*.6,H*.3); c.lineTo(W*.75,H*.18); c.lineTo(W,H*.4); c.lineTo(W,H*.6); c.fill();
+      /* street */
+      c.fillStyle='#1e2535'; c.fillRect(0,H*.6,W,H*.4);
+      c.strokeStyle='rgba(255,255,255,.07)'; c.lineWidth=1;
+      c.beginPath(); c.moveTo(0,H*.62); c.lineTo(W,H*.62); c.stroke();
+      /* GOJI truck/signage glow */
+      c.fillStyle='rgba(61,122,82,.2)'; c.fillRect(W*.6,H*.6,W*.3,H*.15);
+      c.strokeStyle='rgba(90,158,111,.5)'; c.lineWidth=1.5;
+      c.strokeRect(W*.6,H*.6,W*.3,H*.15);
+      c.fillStyle='rgba(90,158,111,.7)'; c.font=`bold ${W*.025}px sans-serif`;
+      c.textAlign='center'; c.fillText('護持株式会社',W*.75,H*.7);
+      c.font=`${W*.016}px sans-serif`; c.fillStyle='rgba(255,255,255,.4)';
+      c.fillText('京都エリア',W*.75,H*.73);
+      /* street light glow */
+      c.fillStyle='rgba(255,220,100,.06)';
+      c.beginPath(); c.arc(W*.25,H*.58,W*.15,0,Math.PI*2); c.fill();
+      c.fillStyle='rgba(255,220,100,.5)'; c.beginPath(); c.arc(W*.25,H*.58,3,0,Math.PI*2); c.fill();
+    },
+    /* Strip 5 — report/quality check */
+    strip5: (c,W,H)=>{
+      c.fillStyle='#1C2B3A'; c.fillRect(0,0,W,H);
+      /* tablet/phone showing report */
+      c.fillStyle='#0a1520'; c.beginPath(); c.roundRect(W*.25,H*.08,W*.5,H*.8,8); c.fill();
+      c.strokeStyle='rgba(61,122,82,.4)'; c.lineWidth=1.5; c.strokeRect(W*.25,H*.08,W*.5,H*.8);
+      /* screen content */
+      c.fillStyle='#1a2535'; c.fillRect(W*.27,H*.1,W*.46,H*.76);
+      /* report header */
+      c.fillStyle='var(--green)'; c.fillStyle='#3D7A52'; c.fillRect(W*.27,H*.1,W*.46,H*.08);
+      c.fillStyle='#fff'; c.font=`bold ${W*.025}px sans-serif`; c.textAlign='center';
+      c.fillText('清掃完了報告',W*.5,H*.155);
+      /* checklist lines */
+      const items = [['✓','客室清掃'],['✓','ベッドメイキング'],['✓','アメニティ補充'],['✓','浴室清掃'],['✓','写真撮影完了']];
+      items.forEach(([check,text],i)=>{
+        const y = H*.22+i*H*.1;
+        c.fillStyle='#5A9E6F'; c.font=`bold ${W*.025}px sans-serif`; c.textAlign='left';
+        c.fillText(check,W*.3,y);
+        c.fillStyle='rgba(255,255,255,.7)'; c.font=`${W*.02}px sans-serif`;
+        c.fillText(text,W*.36,y);
+        c.strokeStyle='rgba(255,255,255,.06)'; c.lineWidth=.5;
+        c.beginPath(); c.moveTo(W*.28,y+H*.025); c.lineTo(W*.72,y+H*.025); c.stroke();
+      });
+      /* photo thumbnails at bottom */
+      [[W*.29,H*.74,'#2a3545'],[W*.4,H*.74,'#1e3525'],[W*.51,H*.74,'#1a2535'],[W*.62,H*.74,'#2a2040']].forEach(([x,y,bg])=>{
+        c.fillStyle=bg; c.fillRect(x,y,W*.09,H*.1);
+        c.strokeStyle='rgba(90,158,111,.3)'; c.lineWidth=.5; c.strokeRect(x,y,W*.09,H*.1);
+      });
+      /* 護持 watermark */
+      c.fillStyle='rgba(90,158,111,.08)'; c.font=`bold ${W*.18}px 'DM Serif Display',serif`;
+      c.textAlign='center'; c.fillText('GOJI',W*.5,H*.6);
+    },
+    /* Service card images */
+    s1: (c,W,H)=>{ /* room */
+      c.fillStyle='#e8e4dc'; c.fillRect(0,0,W,H);
+      const wg = c.createLinearGradient(0,0,W*.4,0);
+      wg.addColorStop(0,'rgba(255,245,220,.6)'); wg.addColorStop(1,'transparent');
+      c.fillStyle=wg; c.fillRect(0,0,W*.4,H);
+      c.fillStyle='#f8f5f0'; c.fillRect(W*.05,H*.05,W*.55,H*.75);
+      c.fillStyle='#ece8e2'; c.fillRect(W*.05,H*.05,W*.55,H*.12);
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.08,H*.07,W*.15,H*.15,3); c.fill();
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.26,H*.07,W*.15,H*.15,3); c.fill();
+      c.fillStyle='rgba(61,122,82,.15)'; c.fillRect(W*.65,0,W*.35,H);
+      c.fillStyle='#3D7A52'; c.beginPath(); c.arc(W*.8,H*.4,W*.08,0,Math.PI*2); c.fill();
+      c.strokeStyle='#3D7A52'; c.lineWidth=3; c.lineCap='round';
+      c.beginPath(); c.moveTo(W*.72,H*.5); c.lineTo(W*.55,H*.4); c.stroke();
+    },
+    s2: (c,W,H)=>{ /* amenity */
+      c.fillStyle='#1e2535'; c.fillRect(0,0,W,H);
+      c.fillStyle='#d4c8b8'; c.fillRect(0,H*.6,W,H*.4);
+      [[W*.2,'#3D7A52'],[W*.38,'#5A9E6F'],[W*.56,'#2a5a3a'],[W*.74,'#3D7A52']].forEach(([x,col])=>{
+        c.fillStyle=col; c.beginPath(); c.roundRect(x-W*.06,H*.2,W*.1,H*.42,4); c.fill();
+        c.fillStyle='rgba(255,255,255,.15)'; c.fillRect(x-W*.02,H*.22,W*.02,H*.1);
+      });
+      c.fillStyle='#c8a87a'; c.fillRect(W*.1,H*.58,W*.8,H*.04);
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.05,H*.62,W*.22,H*.14,2); c.fill();
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.05,H*.77,W*.22,H*.14,2); c.fill();
+    },
+    s3: (c,W,H)=>{ /* bathroom */
+      c.fillStyle='#e4eef0'; c.fillRect(0,0,W,H);
+      c.strokeStyle='#cddde0'; c.lineWidth=1;
+      for(let x=0;x<W;x+=W*.2){ c.beginPath(); c.moveTo(x,0); c.lineTo(x,H); c.stroke(); }
+      for(let y=0;y<H;y+=H*.2){ c.beginPath(); c.moveTo(0,y); c.lineTo(W,y); c.stroke(); }
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.1,H*.1,W*.5,H*.35,8); c.fill();
+      c.strokeStyle='#cdd8d8'; c.lineWidth=1.5; c.strokeRect(W*.1,H*.1,W*.5,H*.35);
+      c.fillStyle='rgba(61,122,82,.2)';
+      c.beginPath(); c.arc(W*.7,H*.45,W*.06,0,Math.PI*2); c.fill();
+      c.fillStyle='rgba(255,255,255,.8)';
+      c.beginPath(); c.ellipse(W*.75,H*.7,W*.12,H*.07,-.2,0,Math.PI*2); c.fill();
+      c.fillStyle='rgba(90,158,111,.4)'; [[W*.3,H*.06],[W*.5,H*.08],[W*.65,H*.15]].forEach(([x,y])=>{
+        c.beginPath(); c.arc(x,y,2,0,Math.PI*2); c.fill();
+      });
+    },
+    s4: (c,W,H)=>{ /* lobby */
+      c.fillStyle='#f0ebe3'; c.fillRect(0,0,W,H);
+      c.fillStyle='#d4cbbf'; c.fillRect(0,H*.85,W,H*.15);
+      c.fillStyle='#1e1a14'; c.fillRect(W*.05,H*.2,W*.9,H*.65);
+      c.fillStyle='rgba(255,245,220,.12)';
+      c.fillRect(W*.1,H*.25,W*.35,H*.55); c.fillRect(W*.55,H*.25,W*.35,H*.55);
+      c.strokeStyle='rgba(200,180,120,.2)'; c.lineWidth=1;
+      c.strokeRect(W*.1,H*.25,W*.35,H*.55); c.strokeRect(W*.55,H*.25,W*.35,H*.55);
+      c.strokeStyle='rgba(200,180,120,.1)'; c.lineWidth=.5;
+      c.beginPath(); c.moveTo(W*.275,H*.25); c.lineTo(W*.275,H*.8); c.stroke();
+      c.beginPath(); c.moveTo(W*.1,H*.525); c.lineTo(W*.45,H*.525); c.stroke();
+      c.fillStyle='#3D7A52'; c.beginPath(); c.arc(W*.5,H*.5,W*.04,0,Math.PI*2); c.fill();
+      c.strokeStyle='#3D7A52'; c.lineWidth=2;
+      c.beginPath(); c.moveTo(W*.5,H*.5); c.lineTo(W*.5,H*.15); c.stroke();
+      c.fillStyle='rgba(90,158,111,.3)'; c.beginPath(); c.arc(W*.5,H*.15,W*.03,0,Math.PI*2); c.fill();
+    },
+    s5: (c,W,H)=>{ /* linen */
+      c.fillStyle='#2a3040'; c.fillRect(0,0,W,H);
+      [[0,0,'#e8e4df'],[W*.04,H*.08,'#f0ece8'],[W*.08,H*.16,'#f8f5f2']].forEach(([x,y,col])=>{
+        c.fillStyle=col; c.fillRect(x+W*.1,y+H*.15,W*.6,H*.25);
+        c.strokeStyle='rgba(0,0,0,.05)'; c.lineWidth=1; c.strokeRect(x+W*.1,y+H*.15,W*.6,H*.25);
+      });
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.1,H*.55,W*.35,H*.12,2); c.fill();
+      c.fillStyle='rgba(0,0,0,.05)'; c.fillRect(W*.1,H*.6,W*.35,H*.01);
+      c.fillStyle='#fff'; c.beginPath(); c.roundRect(W*.1,H*.67,W*.35,H*.12,2); c.fill();
+      c.fillStyle='rgba(90,158,111,.3)'; c.beginPath(); c.arc(W*.8,H*.65,W*.1,0,Math.PI*2); c.fill();
+      c.fillStyle='#3D7A52'; c.font=`bold ${W*.06}px sans-serif`; c.textAlign='center';
+      c.fillText('✓',W*.8,H*.68);
+    },
+    s6: (c,W,H)=>{ /* deep clean */
+      c.fillStyle='#1a2535'; c.fillRect(0,0,W,H);
+      /* AC unit on wall */
+      c.fillStyle='#e0e8ec'; c.beginPath(); c.roundRect(W*.1,H*.08,W*.8,H*.18,4); c.fill();
+      c.strokeStyle='rgba(200,215,220,.5)'; c.lineWidth=1; c.strokeRect(W*.1,H*.08,W*.8,H*.18);
+      for(let i=0;i<5;i++){ c.strokeStyle='rgba(150,170,180,.4)'; c.beginPath(); c.moveTo(W*.12+i*W*.15,H*.13); c.lineTo(W*.12+i*W*.15,H*.22); c.stroke(); }
+      /* window track */
+      c.fillStyle='#d0ccc5'; c.fillRect(0,H*.35,W,H*.12);
+      c.strokeStyle='#b8b4ae'; c.lineWidth=1.5;
+      for(let x=0;x<W;x+=W*.12){ c.beginPath(); c.moveTo(x,H*.35); c.lineTo(x,H*.47); c.stroke(); }
+      c.fillStyle='rgba(61,122,82,.2)'; c.fillRect(0,H*.43,W,H*.02);
+      /* brush tool */
+      c.fillStyle='#5A9E6F'; c.fillRect(W*.45,H*.55,W*.05,H*.3);
+      c.fillStyle='#3D7A52'; c.beginPath(); c.ellipse(W*.475,H*.55,W*.1,H*.05,0,0,Math.PI*2); c.fill();
+      /* spray mist */
+      c.fillStyle='rgba(90,158,111,.15)';
+      for(let i=0;i<8;i++){
+        c.beginPath(); c.arc(W*.6+Math.cos(i)*W*.12, H*.62+Math.sin(i)*H*.08, 3, 0, Math.PI*2); c.fill();
+      }
+      /* sparkles */
+      c.fillStyle='rgba(90,158,111,.6)';
+      [[W*.2,H*.6],[W*.35,H*.55],[W*.75,H*.65],[W*.85,H*.5]].forEach(([x,y])=>{
+        c.beginPath(); c.arc(x,y,2,0,Math.PI*2); c.fill();
+      });
+    }
+  };
+
+  if(scenes[type]) scenes[type](ctx, w, h);
+}
+
+function initAllCanvases(){
+  const map = {
+    'c-hero1':'hero1','c-hero2':'hero2','c-hero3':'hero3',
+    'c-strip1':'strip1','c-strip2':'strip2','c-strip3':'strip3',
+    'c-strip4':'strip4','c-strip5':'strip5',
+    'c-s1':'s1','c-s2':'s2','c-s3':'s3',
+    'c-s4':'s4','c-s5':'s5','c-s6':'s6'
+  };
+  Object.entries(map).forEach(([id,type])=>drawScene(id,type));
+}
+
+/* ── Language ── */
 const MSGS={ja:'ただいま混み合っております。しばらくしてから再度お試しください。',zh:'目前系統繁忙，請稍後再試。',en:"We're currently busy. Please try again shortly."};
 let curLang='ja';
 function setLang(l){
   curLang=l;
   document.documentElement.setAttribute('data-lang',l);
   document.querySelectorAll('.lb').forEach(b=>b.classList.remove('active'));
-  document.querySelector('.lb[onclick="setLang(\''+l+'\')"]').classList.add('active');
+  document.querySelector(`.lb[onclick="setLang('${l}')"]`).classList.add('active');
 }
+
+/* ── Nav ── */
 function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
-window.addEventListener('scroll',()=>{document.getElementById('nav').style.background=window.scrollY>30?'rgba(17,24,32,1)':'rgba(17,24,32,.96)'});
+window.addEventListener('scroll',()=>{ document.getElementById('nav').style.background = window.scrollY>30?'rgba(17,24,32,1)':'rgba(17,24,32,.97)'; });
+
+/* ── Form ── */
 function submitForm(){
   const btn=document.getElementById('sendBtn');
   btn.disabled=true;
@@ -638,9 +1094,9 @@ function submitForm(){
   });
   setTimeout(()=>{
     ['f-name','f-phone','f-email','f-prop','f-msg'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
-    document.getElementById('f-svc').value='';
+    document.getElementById('f-svc').value=''; document.getElementById('f-area').value='';
     btn.disabled=false;
-    const orig={ja:'送信する',zh:'送出',en:'Send Message'};
+    const orig={ja:'護持株式会社に送信する',zh:'送出至護持株式會社',en:'Send to GOJI Co., Ltd.'};
     btn.querySelectorAll('.t-ja,.t-zh,.t-en').forEach(el=>{
       const l=Array.from(el.classList).find(c=>c.startsWith('t-'))?.slice(2);
       if(l&&orig[l])el.textContent=orig[l];
@@ -651,8 +1107,13 @@ function submitForm(){
     setTimeout(()=>t.classList.remove('show'),5000);
   },1600);
 }
+
+/* ── Scroll reveal ── */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.08});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+/* ── Init ── */
+window.addEventListener('load', initAllCanvases);
 </script>
 </body>
 </html>
