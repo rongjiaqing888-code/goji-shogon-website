@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>護持株式会社 | GOJI Cleaning Service — goji-shogon.jp</title>
+  <meta name="description" content="東伊豆・伊豆半島の民宿・旅館・ゲストハウス専門の清掃サービス。護持株式会社。"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+TC:wght@300;400;600&family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --ink:#111820;--deep:#1C2B3A;
+      --green:#3D7A52;--green2:#5A9E6F;
+      --mist:#8FA3B1;--cloud:#F0F4F7;
+      --white:#FFFFFF;--sand:#FAF8F5;
+      --rule:rgba(61,122,82,.15);--gold:#B89A58;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Noto Sans JP','Inter',sans-serif;background:var(--sand);color:var(--ink);overflow-x:hidden}
+
+    /* LANG */
+    [data-lang=ja] .t-zh,[data-lang=ja] .t-en{display:none}
+    [data-lang=zh] .t-ja,[data-lang=zh] .t-en{display:none}
+    [data-lang=en] .t-ja,[data-lang=en] .t-zh{display:none}
+    [data-lang=zh] body,[data-lang=zh] .serif{font-family:'Noto Serif TC','Inter',sans-serif}
+    [data-lang=en] body{font-family:'Inter','Noto Sans JP',sans-serif}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:300;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:rgba(17,24,32,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(61,122,82,.2)}
+    .logo{text-decoration:none;display:flex;align-items:baseline;gap:.5rem}
+    .logo-mark{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff;letter-spacing:.06em}
+    .logo-mark span{color:var(--green2)}
+    .logo-tag{font-size:.6rem;color:var(--mist);letter-spacing:.1em;text-transform:uppercase}
+    .nav-right{display:flex;align-items:center;gap:1.5rem}
+    .nav-links{display:flex;gap:1.8rem;list-style:none}
+    .nav-links a{color:rgba(255,255,255,.55);text-decoration:none;font-size:.73rem;font-weight:500;letter-spacing:.09em;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover{color:var(--green2)}
+    .nav-cta{background:var(--green);color:#fff!important;padding:.4rem 1.1rem;border-radius:2px;font-size:.72rem!important;font-weight:600!important;letter-spacing:.08em!important;transition:background .2s!important}
+    .nav-cta:hover{background:var(--green2)!important}
+    .lang-sw{display:flex;gap:.3rem}
+    .lb{background:transparent;border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.4);font-size:.63rem;letter-spacing:.07em;padding:.22rem .5rem;cursor:pointer;border-radius:2px;font-family:inherit;transition:all .2s}
+    .lb:hover,.lb.active{border-color:var(--green2);color:var(--green2);background:rgba(61,122,82,.1)}
+    .burger{display:none;cursor:pointer;flex-direction:column;gap:5px}
+    .burger span{width:22px;height:1.5px;background:#fff;display:block;border-radius:1px}
+    @media(max-width:820px){
+      .nav-links{display:none;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:var(--ink);padding:1.5rem 5vw;gap:1.2rem;border-top:1px solid rgba(255,255,255,.05)}
+      .nav-links.open{display:flex}
+      .burger{display:flex}
+      .logo-tag,.nav-cta-li{display:none}
+    }
+
+    /* HERO */
+    #hero{min-height:100vh;background:var(--ink);display:flex;flex-direction:column;justify-content:center;padding:80px 5vw 0;position:relative;overflow:hidden}
+    #hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);background-size:32px 32px;pointer-events:none}
+    .wipe{position:absolute;top:0;left:-3px;bottom:0;width:2px;background:linear-gradient(to bottom,transparent,var(--green) 30%,var(--green2) 70%,transparent);animation:wipe 9s ease-in-out infinite}
+    @keyframes wipe{0%{left:-3px;opacity:0}5%{opacity:1}95%{opacity:1}100%{left:100%;opacity:0}}
+    .hero-in{position:relative;z-index:1;max-width:780px}
+    .eyebrow{font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green2);display:flex;align-items:center;gap:.8rem;margin-bottom:2.2rem;font-weight:500}
+    .eyebrow::before{content:'';width:36px;height:1px;background:var(--green2);display:block}
+    .h1j{font-family:'Noto Serif JP',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:300;color:#fff;line-height:1.25;margin-bottom:.7rem;letter-spacing:.04em}
+    .h1j .acc{color:var(--green2);font-weight:600}
+    .h1z{font-family:'Noto Serif TC',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:300;color:#fff;line-height:1.3;margin-bottom:.7rem}
+    .h1z .acc{color:var(--green2);font-weight:600}
+    .h1e{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4.5vw,3.2rem);font-weight:400;color:#fff;line-height:1.3;margin-bottom:.7rem}
+    .h1e .acc{color:var(--green2)}
+    .hsub{font-family:'DM Serif Display',serif;font-size:clamp(.9rem,1.8vw,1.2rem);color:var(--mist);letter-spacing:.12em;margin-bottom:2.5rem}
+    .hdiv{width:48px;height:1px;background:var(--green);margin-bottom:2rem}
+    .hdesc{font-size:.93rem;font-weight:300;line-height:1.95;color:rgba(255,255,255,.55);max-width:540px;margin-bottom:3rem}
+    .hbtns{display:flex;gap:1rem;flex-wrap:wrap}
+    .bpri{background:var(--green);color:#fff;padding:.85rem 2rem;border-radius:2px;text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,transform .15s;display:inline-block}
+    .bpri:hover{background:var(--green2);transform:translateY(-2px)}
+    .bgh{border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);padding:.85rem 2rem;border-radius:2px;text-decoration:none;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;transition:border-color .2s,color .2s;display:inline-block}
+    .bgh:hover{border-color:var(--green2);color:var(--green2)}
+    .hstats{display:flex;gap:2.5rem;margin-top:4.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.07);flex-wrap:wrap}
+    .sn{font-family:'DM Serif Display',serif;font-size:2.2rem;color:var(--green2);line-height:1}
+    .sl{font-size:.7rem;color:rgba(255,255,255,.4);margin-top:.25rem;letter-spacing:.06em}
+    .hwave{position:absolute;bottom:-1px;left:0;right:0;height:90px}
+
+    /* SECTIONS */
+    .sec{padding:96px 5vw}
+    .sec-w{background:var(--white)}
+    .sec-c{background:var(--cloud)}
+    .sec-d{background:var(--deep)}
+    .slabel{font-size:.67rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);font-weight:500;display:flex;align-items:center;gap:.7rem;margin-bottom:1rem}
+    .slabel::before{content:'';width:24px;height:1px;background:var(--green);display:block}
+    .stitle{font-family:'Noto Serif JP',serif;font-size:clamp(1.6rem,3.2vw,2.4rem);font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:.35rem}
+    .stitle-e{font-family:'DM Serif Display',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:.35rem}
+    .stitle-z{font-family:'Noto Serif TC',serif;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:400;color:var(--ink);line-height:1.25;margin-bottom:.35rem}
+    .ssub{font-family:'DM Serif Display',serif;font-size:.93rem;color:var(--mist);letter-spacing:.1em;margin-bottom:3rem}
+    .sec-d .stitle,.sec-d .stitle-e,.sec-d .stitle-z{color:#fff}
+    .sec-d .slabel{color:var(--green2)}
+    .sec-d .slabel::before{background:var(--green2)}
+
+    /* WHY */
+    .why-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+    .wc{background:var(--white);padding:2.5rem 2rem;transition:background .25s}
+    .wc:hover{background:var(--sand)}
+    .wi{font-size:1.8rem;margin-bottom:1.2rem}
+    .wt{font-family:'Noto Serif JP',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.6rem}
+    .wte{font-family:'DM Serif Display',serif;font-size:1rem;font-weight:400;color:var(--ink);margin-bottom:.6rem}
+    .wtz{font-family:'Noto Serif TC',serif;font-size:1rem;font-weight:600;color:var(--ink);margin-bottom:.6rem}
+    .wd{font-size:.82rem;color:#5a6a7a;line-height:1.85;font-weight:300}
+
+    /* SERVICES */
+    .srv-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem}
+    .sc{background:var(--white);border:1px solid rgba(0,0,0,.06);border-radius:4px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+    .sc:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.08)}
+    .sh{padding:2rem 2rem 1rem;border-bottom:3px solid var(--green);display:flex;align-items:flex-start;gap:1rem}
+    .se{font-size:2rem;flex-shrink:0}
+    .sn2{font-family:'Noto Serif JP',serif;font-size:1.03rem;font-weight:600;color:var(--ink)}
+    .sn2e{font-family:'DM Serif Display',serif;font-size:1rem;font-weight:400;color:var(--ink)}
+    .sn2z{font-family:'Noto Serif TC',serif;font-size:1rem;font-weight:600;color:var(--ink)}
+    .snen{font-size:.7rem;color:var(--mist);letter-spacing:.07em;text-transform:uppercase;margin-top:.15rem}
+    .sb{padding:1.5rem 2rem}
+    .sd{font-size:.82rem;color:#5a6a7a;line-height:1.85;font-weight:300;margin-bottom:1.2rem}
+    .tags{display:flex;flex-wrap:wrap;gap:.4rem}
+    .tag{background:rgba(61,122,82,.09);color:var(--green);font-size:.68rem;padding:.22rem .65rem;border-radius:20px;font-weight:500}
+
+    /* FLOW */
+    .flow-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:0;margin-top:1rem}
+    .fs{padding:2.5rem 1.5rem 2rem;position:relative;text-align:center}
+    .fs::after{content:'→';position:absolute;right:-.4rem;top:45%;color:var(--green2);font-size:1.2rem}
+    .fs:last-child::after{display:none}
+    .fn{font-family:'DM Serif Display',serif;font-size:2.8rem;color:rgba(61,122,82,.12);line-height:1;margin-bottom:.4rem}
+    .fi{font-size:1.6rem;margin-bottom:.7rem}
+    .ft2{font-family:'Noto Serif JP',serif;font-size:.93rem;font-weight:600;color:var(--ink);margin-bottom:.45rem}
+    .ft2e{font-family:'DM Serif Display',serif;font-size:.93rem;font-weight:400;color:var(--ink);margin-bottom:.45rem}
+    .ft2z{font-family:'Noto Serif TC',serif;font-size:.93rem;font-weight:600;color:var(--ink);margin-bottom:.45rem}
+    .fd{font-size:.77rem;color:var(--mist);line-height:1.7}
+
+    /* COMPANY */
+    .co-g{display:grid;grid-template-columns:1fr 1.1fr;gap:5vw;align-items:start}
+    .co-t{width:100%;border-collapse:collapse}
+    .co-t tr{border-bottom:1px solid rgba(0,0,0,.07)}
+    .co-t tr:first-child{border-top:1px solid rgba(0,0,0,.07)}
+    .co-t th{width:32%;padding:1.1rem .5rem 1.1rem 0;font-size:.74rem;color:var(--mist);font-weight:500;text-align:left;vertical-align:top;letter-spacing:.05em}
+    .co-t td{padding:1.1rem 0;font-size:.87rem;line-height:1.7;font-weight:300;color:var(--ink)}
+    .co-t td strong{font-weight:600;font-size:.95rem}
+    .co-t td small{color:var(--mist);font-size:.73rem;display:block}
+    .co-v{background:linear-gradient(160deg,#1C2B3A 0%,#111820 100%);border-radius:4px;padding:2.8rem 2.4rem;display:flex;flex-direction:column;gap:2rem}
+    .cv-domain{font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--green2);letter-spacing:.1em}
+    .cv-tag-j{font-family:'Noto Serif JP',serif;font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.75);line-height:1.8}
+    .cv-tag-z{font-family:'Noto Serif TC',serif;font-size:1.05rem;font-weight:300;color:rgba(255,255,255,.75);line-height:1.8}
+    .cv-tag-e{font-family:'DM Serif Display',serif;font-size:1.05rem;font-weight:400;color:rgba(255,255,255,.75);line-height:1.8}
+    .cv-list{display:flex;flex-direction:column;gap:.55rem}
+    .cv-item{display:flex;align-items:flex-start;gap:.7rem;font-size:.78rem;color:rgba(255,255,255,.5)}
+    .cv-item::before{content:'✓';color:var(--green2);font-weight:700;flex-shrink:0}
+    @media(max-width:780px){.co-g{grid-template-columns:1fr}.co-v{display:none}}
+
+    /* CONTACT */
+    #contact{background:var(--deep);padding:96px 5vw;position:relative;overflow:hidden}
+    #contact .stitle,#contact .stitle-e,#contact .stitle-z{color:#fff}
+    #contact .slabel{color:var(--green2)}
+    #contact .slabel::before{background:var(--green2)}
+    .ct-g{display:grid;grid-template-columns:1fr 1.35fr;gap:6vw;align-items:start;position:relative;z-index:1}
+    .ci-list{display:flex;flex-direction:column;gap:1.8rem;margin-top:.5rem}
+    .ci-row{display:flex;gap:1rem;padding-bottom:1.8rem;border-bottom:1px solid rgba(255,255,255,.05)}
+    .ci-row:last-child{border:none}
+    .ci-ico{font-size:1rem;width:28px;text-align:center;flex-shrink:0;padding-top:.1rem}
+    .ci-ttl{font-size:.76rem;font-weight:500;color:#fff;letter-spacing:.08em;margin-bottom:.28rem}
+    .ci-val{font-size:.8rem;color:var(--mist);line-height:1.7;font-weight:300}
+    .fbox{background:rgba(255,255,255,.04);border:1px solid rgba(61,122,82,.2);padding:2.5rem;border-radius:4px}
+    .fbox-ttl{font-family:'Noto Serif JP',serif;font-size:1rem;color:#fff;margin-bottom:1.8rem;font-weight:400}
+    .fbox-ttle{font-family:'DM Serif Display',serif;font-size:1rem;color:#fff;margin-bottom:1.8rem;font-weight:400}
+    .fbox-ttlz{font-family:'Noto Serif TC',serif;font-size:1rem;color:#fff;margin-bottom:1.8rem;font-weight:400}
+    .f-row2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+    .fg{margin-bottom:.95rem}
+    .fg label{display:block;font-size:.63rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.32);margin-bottom:.38rem}
+    .fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:.7rem .9rem;color:#fff;font-size:.86rem;font-family:inherit;outline:none;border-radius:2px;appearance:none;transition:border-color .2s}
+    .fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.18)}
+    .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--green2)}
+    .fg select option{background:var(--deep)}
+    .fg textarea{resize:vertical;min-height:86px}
+    .bsub{width:100%;background:var(--green);color:#fff;border:none;padding:.9rem;font-size:.8rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:2px;margin-top:.5rem;font-family:inherit;transition:background .2s}
+    .bsub:hover{background:var(--green2)}
+    .bsub:disabled{opacity:.5;cursor:not-allowed}
+    @media(max-width:780px){.ct-g{grid-template-columns:1fr}.f-row2{grid-template-columns:1fr}}
+
+    /* TOAST */
+    #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(60px);background:var(--ink);border:1px solid var(--green);color:#fff;padding:.9rem 2rem;font-size:.83rem;border-radius:3px;box-shadow:0 8px 32px rgba(0,0,0,.4);z-index:999;opacity:0;transition:transform .4s cubic-bezier(.34,1.4,.64,1),opacity .4s;pointer-events:none;white-space:nowrap}
+    #toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+    /* FOOTER */
+    footer{background:var(--ink);padding:3rem 5vw 1.8rem}
+    .ft-top{display:flex;justify-content:space-between;align-items:flex-start;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,.05);flex-wrap:wrap;gap:1.5rem}
+    .ft-brand .fe{font-family:'DM Serif Display',serif;font-size:1.4rem;color:#fff;letter-spacing:.08em}
+    .ft-brand .fe span{color:var(--green2)}
+    .ft-brand .fj{font-size:.72rem;color:var(--mist);margin-top:.2rem;letter-spacing:.1em}
+    .ft-brand .fd2{font-size:.68rem;color:rgba(255,255,255,.22);margin-top:.4rem;letter-spacing:.06em}
+    .ft-info{font-size:.73rem;color:var(--mist);line-height:1.9;font-weight:300;text-align:right}
+    .ft-bot{display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:.6rem}
+    .ft-copy{font-size:.67rem;color:rgba(255,255,255,.18)}
+    .ft-links{display:flex;gap:1.4rem}
+    .ft-links a{font-size:.67rem;color:rgba(255,255,255,.25);text-decoration:none;transition:color .2s}
+    .ft-links a:hover{color:var(--green2)}
+    @media(max-width:600px){.ft-info{text-align:left}.ft-top{flex-direction:column}}
+
+    /* REVEAL */
+    .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+    .rv.on{opacity:1;transform:none}
+    @media(max-width:600px){.flow-g{grid-template-columns:1fr 1fr}.fs::after{display:none}}
+  </style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#" class="logo">
+    <span class="logo-mark">GO<span>JI</span></span>
+    <span class="logo-tag">goji-shogon.jp</span>
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#why"><span class="t-ja">選ばれる理由</span><span class="t-zh">選擇原因</span><span class="t-en">Why Us</span></a></li>
+      <li><a href="#services"><span class="t-ja">サービス</span><span class="t-zh">服務項目</span><span class="t-en">Services</span></a></li>
+      <li><a href="#flow"><span class="t-ja">ご利用の流れ</span><span class="t-zh">服務流程</span><span class="t-en">How It Works</span></a></li>
+      <li><a href="#company"><span class="t-ja">会社概要</span><span class="t-zh">公司概要</span><span class="t-en">About</span></a></li>
+      <li class="nav-cta-li"><a href="#contact" class="nav-cta"><span class="t-ja">お問い合わせ</span><span class="t-zh">聯絡我們</span><span class="t-en">Contact</span></a></li>
+    </ul>
+    <div class="lang-sw">
+      <button class="lb active" onclick="setLang('ja')">JP</button>
+      <button class="lb" onclick="setLang('zh')">繁中</button>
+      <button class="lb" onclick="setLang('en')">EN</button>
+    </div>
+    <div class="burger" id="burger" onclick="toggleNav()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wipe"></div>
+  <div class="hero-in">
+    <div class="eyebrow">
+      <span class="t-ja">護持株式会社 · 民宿専門清掃サービス · goji-shogon.jp</span>
+      <span class="t-zh">護持株式會社 · 民宿專業清潔服務 · goji-shogon.jp</span>
+      <span class="t-en">GOJI Co., Ltd. · Professional Guesthouse Cleaning · goji-shogon.jp</span>
+    </div>
+    <h1 class="t-ja h1j">清潔は、<span class="acc">おもてなし</span>の<br/>はじまりです。</h1>
+    <h1 class="t-zh h1z">清潔，是<span class="acc">款待</span>的起點。</h1>
+    <h1 class="t-en h1e">Cleanliness is<br/><span class="acc">the first welcome.</span></h1>
+    <p class="t-ja hsub">Cleanliness begins every perfect stay.</p>
+    <p class="t-zh hsub" style="font-family:'Noto Serif TC',serif">清潔，始於每一次完美的住宿體驗。</p>
+    <div class="hdiv"></div>
+    <p class="t-ja hdesc">東伊豆・伊豆半島の民宿・ゲストハウス・旅館を専門とした清掃サービスです。<br/>チェックアウトからチェックインまで、お部屋を「迎える空間」に整えます。</p>
+    <p class="t-zh hdesc" style="font-family:'Noto Serif TC',serif">專為東伊豆・伊豆半島的民宿、Guest House、旅館提供清潔服務。<br/>從退房到入住，我們將每個房間還原為「迎賓的空間」。</p>
+    <p class="t-en hdesc">Specialized cleaning for guesthouses, B&amp;Bs and ryokan across the Izu Peninsula.<br/>From checkout to check-in, we prepare every room to welcome your next guest.</p>
+    <div class="hbtns">
+      <a href="#contact" class="bpri"><span class="t-ja">無料で相談する</span><span class="t-zh">免費諮詢</span><span class="t-en">Get a Free Quote</span></a>
+      <a href="#services" class="bgh"><span class="t-ja">サービス一覧</span><span class="t-zh">服務項目</span><span class="t-en">Our Services</span></a>
+    </div>
+    <div class="hstats">
+      <div><div class="sn">300<span style="font-size:1.2rem">+</span></div><div class="sl t-ja">対応施設数</div><div class="sl t-zh">服務設施數</div><div class="sl t-en">Properties Served</div></div>
+      <div><div class="sn">4<span style="font-size:1.2rem;font-family:'Noto Sans JP'">年</span></div><div class="sl t-ja">の実績</div><div class="sl t-zh">年豐富經驗</div><div class="sl t-en">Years Experience</div></div>
+      <div><div class="sn">98<span style="font-size:1.2rem">%</span></div><div class="sl t-ja">顧客満足度</div><div class="sl t-zh">客戶滿意度</div><div class="sl t-en">Satisfaction Rate</div></div>
+    </div>
+  </div>
+  <svg class="hwave" viewBox="0 0 1440 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,45 C360,90 720,0 1080,45 C1260,68 1380,35 1440,45 L1440,90 L0,90 Z" fill="#FAF8F5"/></svg>
+</section>
+
+<!-- WHY -->
+<section id="why" class="sec sec-w">
+  <div class="slabel"><span class="t-ja">選ばれる理由</span><span class="t-zh">為何選擇我們</span><span class="t-en">Why GOJI</span></div>
+  <h2 class="t-ja stitle rv">民宿オーナーに選ばれる4つの理由</h2>
+  <h2 class="t-zh stitle-z rv" >民宿業主選擇我們的4個理由</h2>
+  <h2 class="t-en stitle-e rv">4 Reasons Hosts Choose GOJI</h2>
+  <p class="ssub t-ja">Why Guesthouse Owners Trust Us</p>
+  <div class="why-g">
+    <div class="wc rv"><div class="wi">⚡</div>
+      <div class="t-ja wt">スピーディーな対応</div><div class="t-zh wtz">快速響應</div><div class="t-en wte">Fast Response</div>
+      <p class="t-ja wd">チェックアウト後2時間以内に清掃完了。連泊・繁忙期でも柔軟に対応し、次のゲストを笑顔でお迎えできる状態を整えます。</p>
+      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">退房後2小時內完成清掃。連住旺季也能靈活應對，確保下位房客順利入住。</p>
+      <p class="t-en wd">Rooms cleaned within 2 hours of checkout. Flexible even during peak seasons so your next guest always arrives to a perfect room.</p>
+    </div>
+    <div class="wc rv"><div class="wi">🌿</div>
+      <div class="t-ja wt">品質の一貫性</div><div class="t-zh wtz">品質一致性</div><div class="t-en wte">Consistent Quality</div>
+      <p class="t-ja wd">独自のチェックリストと品質管理システムで、スタッフが変わっても同じ高水準を維持。オーナーの不安をゼロにします。</p>
+      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">採用獨自的檢查清單與品管系統，即便人員更換，服務品質始終如一。</p>
+      <p class="t-en wd">Our proprietary checklists and QC system ensure the same high standard every time, regardless of which staff member cleans.</p>
+    </div>
+    <div class="wc rv"><div class="wi">📋</div>
+      <div class="t-ja wt">オーナー目線の管理</div><div class="t-zh wtz">站在業主角度</div><div class="t-en wte">Owner-First Mindset</div>
+      <p class="t-ja wd">清掃後は写真付きで完了報告。備品の消耗・設備の不具合も即報告するので、オーナー不在でも安心です。</p>
+      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">清掃完成後附照片回報。備品耗盡或設施故障，即時通知業主，讓您不在場也能放心。</p>
+      <p class="t-en wd">Photo reports after every clean. We immediately flag supply shortages or maintenance issues so you stay in control remotely.</p>
+    </div>
+    <div class="wc rv"><div class="wi">🔒</div>
+      <div class="t-ja wt">信頼とセキュリティ</div><div class="t-zh wtz">信賴與安全</div><div class="t-en wte">Trust &amp; Security</div>
+      <p class="t-ja wd">全スタッフに身元確認・個人情報保護教育を実施。鍵の管理ルールも徹底し、ゲストのプライバシーを守ります。</p>
+      <p class="t-zh wd" style="font-family:'Noto Serif TC',serif">所有員工均經身份審查並接受個資保護培訓，嚴格的鑰匙管理規範保護每位房客的隱私。</p>
+      <p class="t-en wd">All staff are background-checked and trained in privacy protection. Strict key management protocols keep your guests safe.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="sec sec-c">
+  <div class="slabel"><span class="t-ja">サービス内容</span><span class="t-zh">服務項目</span><span class="t-en">Our Services</span></div>
+  <h2 class="t-ja stitle rv">民宿に特化した清掃メニュー</h2>
+  <h2 class="t-zh stitle-z rv">專為民宿設計的清潔方案</h2>
+  <h2 class="t-en stitle-e rv">Cleaning Services Built for Guesthouses</h2>
+  <p class="ssub t-ja">Full-Range Cleaning Menu</p>
+  <div class="srv-g">
+
+    <div class="sc rv">
+      <div class="sh"><div class="se">🛏️</div><div>
+        <div class="t-ja sn2">客室清掃・ベッドメイキング</div>
+        <div class="t-zh sn2z">客房清掃・鋪床整理</div>
+        <div class="t-en sn2e">Room Cleaning &amp; Bed Making</div>
+        <div class="snen">Standard Room Service</div>
+      </div></div>
+      <div class="sb">
+        <p class="t-ja sd">床・窓・家具の拭き掃除から、ベッドリネンの交換・整頓まで。枕の向き、スリッパの整列まで細部にこだわり、ゲストが気持ちよく過ごせる空間を仕上げます。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">從地板、窗戶、家具擦拭到床單更換整理，連枕頭方向、拖鞋擺放都不馬虎，每個細節用心對待。</p>
+        <p class="t-en sd">Thorough dusting, wiping and linen changes. We obsess over every detail — pillow alignment, slipper placement — so guests feel truly welcomed.</p>
+        <div class="tags">
+          <span class="tag t-ja">ベッドメイキング</span><span class="tag t-zh">鋪床整理</span><span class="tag t-en">Bed Making</span>
+          <span class="tag t-ja">拭き掃除</span><span class="tag t-zh">擦拭清潔</span><span class="tag t-en">Surface Wipe</span>
+          <span class="tag t-ja">掃除機</span><span class="tag t-zh">吸塵</span><span class="tag t-en">Vacuuming</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc rv">
+      <div class="sh"><div class="se">🧴</div><div>
+        <div class="t-ja sn2">アメニティ補充・セッティング</div>
+        <div class="t-zh sn2z">備品補充・陳設</div>
+        <div class="t-en sn2e">Amenity Replenishment</div>
+        <div class="snen">Setup &amp; Staging</div>
+      </div></div>
+      <div class="sb">
+        <p class="t-ja sd">シャンプー・石鹸・タオルなどを規定の位置に補充・陳列。残量チェックも行いオーナーに即報告します。ウェルカムドリンクの準備も対応可能です。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">洗髮精、肥皂、毛巾等備品依規定位置補充陳設，隨時核查庫存並即時通知業主。可協助準備迎賓飲品。</p>
+        <p class="t-en sd">Restocking all amenities in their designated spots. We track inventory and alert you before you run out. Welcome drink prep on request.</p>
+        <div class="tags">
+          <span class="tag t-ja">タオル整理</span><span class="tag t-zh">毛巾整理</span><span class="tag t-en">Towel Folding</span>
+          <span class="tag t-ja">在庫管理</span><span class="tag t-zh">庫存管理</span><span class="tag t-en">Inventory</span>
+          <span class="tag t-ja">ウェルカム演出</span><span class="tag t-zh">迎賓佈置</span><span class="tag t-en">Welcome Setup</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc rv">
+      <div class="sh"><div class="se">🚿</div><div>
+        <div class="t-ja sn2">浴室・トイレ清掃</div>
+        <div class="t-zh sn2z">浴室・廁所清潔</div>
+        <div class="t-en sn2e">Bathroom &amp; Toilet Cleaning</div>
+        <div class="snen">Deep Sanitation</div>
+      </div></div>
+      <div class="sb">
+        <p class="t-ja sd">浴槽・シャワー・洗面台・鏡・便器を徹底除菌。カビや水垢を残さない仕上げで、清潔感あふれる水回りを実現します。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">浴缸、淋浴間、洗手台、鏡面、馬桶全面消毒清掃，去除黴菌與水垢，打造潔淨舒適的衛浴空間。</p>
+        <p class="t-en sd">Deep sanitizing of tub, shower, basin, mirror and toilet. We eliminate mold and limescale for bathrooms guests rave about in reviews.</p>
+        <div class="tags">
+          <span class="tag t-ja">除菌</span><span class="tag t-zh">消毒殺菌</span><span class="tag t-en">Sanitizing</span>
+          <span class="tag t-ja">カビ防止</span><span class="tag t-zh">防黴處理</span><span class="tag t-en">Mold Prevention</span>
+          <span class="tag t-ja">鏡面磨き</span><span class="tag t-zh">鏡面拋光</span><span class="tag t-en">Mirror Polish</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc rv">
+      <div class="sh"><div class="se">🏨</div><div>
+        <div class="t-ja sn2">共用エリア清掃</div>
+        <div class="t-zh sn2z">公共區域清潔</div>
+        <div class="t-en sn2e">Common Area Cleaning</div>
+        <div class="snen">Lobby · Hallway · Kitchen</div>
+      </div></div>
+      <div class="sb">
+        <p class="t-ja sd">ロビー・廊下・共用キッチン・ダイニングを毎日清潔に。施設全体の第一印象を高め、リピーターにも選ばれる宿を実現します。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">大廳、走廊、公共廚房、餐廳每日清潔維護，提升整體第一印象，讓房客回訪率顯著提升。</p>
+        <p class="t-en sd">Daily cleaning of lobby, hallways, shared kitchen and dining. A spotless common area lifts your property's first impression and keeps guests returning.</p>
+        <div class="tags">
+          <span class="tag t-ja">ロビー</span><span class="tag t-zh">大廳</span><span class="tag t-en">Lobby</span>
+          <span class="tag t-ja">共用キッチン</span><span class="tag t-zh">公共廚房</span><span class="tag t-en">Shared Kitchen</span>
+          <span class="tag t-ja">廊下・階段</span><span class="tag t-zh">走廊・樓梯</span><span class="tag t-en">Hallways</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc rv">
+      <div class="sh"><div class="se">🔄</div><div>
+        <div class="t-ja sn2">リネン交換・洗濯サービス</div>
+        <div class="t-zh sn2z">床單更換・洗衣服務</div>
+        <div class="t-en sn2e">Linen &amp; Laundry Service</div>
+        <div class="snen">Full Textile Care</div>
+      </div></div>
+      <div class="sb">
+        <p class="t-ja sd">シーツ・枕カバー・タオル類の回収・洗濯・アイロン仕上げから補充まで一括対応。ランドリー管理の手間をゼロにします。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">床單、枕套、毛巾的回收、清洗、燙平到補充，一條龍服務，讓業主省去布草管理的煩惱。</p>
+        <p class="t-en sd">Full linen cycle: collect, wash, iron and replace sheets, pillowcases and towels. Zero laundry hassle for property owners.</p>
+        <div class="tags">
+          <span class="tag t-ja">シーツ交換</span><span class="tag t-zh">床單更換</span><span class="tag t-en">Sheet Change</span>
+          <span class="tag t-ja">洗濯・乾燥</span><span class="tag t-zh">洗滌乾燥</span><span class="tag t-en">Wash &amp; Dry</span>
+          <span class="tag t-ja">アイロン仕上げ</span><span class="tag t-zh">熨燙整理</span><span class="tag t-en">Ironing</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sc rv">
+      <div class="sh"><div class="se">🌸</div><div>
+        <div class="t-ja sn2">定期大掃除・特別清掃</div>
+        <div class="t-zh sn2z">定期大掃除・特殊清潔</div>
+        <div class="t-en sn2e">Deep Clean &amp; Special Service</div>
+        <div class="snen">Seasonal &amp; Move-Out</div>
+      </div></div>
+      <div class="sb">
+        <p class="t-ja sd">季節の変わり目や繁忙期前の徹底的な大掃除に対応。エアコンフィルター洗浄・窓サッシ・換気扇など、日常清掃では手が届かない箇所まで仕上げます。</p>
+        <p class="t-zh sd" style="font-family:'Noto Serif TC',serif">季節交替或旺季前的全面大掃除。冷氣濾網清洗、窗框軌道、抽油煙機等日常難以兼顧的部位，徹底清潔。</p>
+        <p class="t-en sd">Seasonal deep cleans before busy periods. Air-con filters, window tracks, exhaust fans — all the spots regular cleaning misses.</p>
+        <div class="tags">
+          <span class="tag t-ja">エアコン清掃</span><span class="tag t-zh">冷氣清洗</span><span class="tag t-en">AC Filter Clean</span>
+          <span class="tag t-ja">窓・サッシ</span><span class="tag t-zh">窗戶清潔</span><span class="tag t-en">Window &amp; Tracks</span>
+          <span class="tag t-ja">換気扇</span><span class="tag t-zh">通風扇</span><span class="tag t-en">Exhaust Fan</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow" class="sec sec-w">
+  <div class="slabel"><span class="t-ja">ご利用の流れ</span><span class="t-zh">服務流程</span><span class="t-en">How It Works</span></div>
+  <h2 class="t-ja stitle rv">簡単4ステップで、すぐにスタート</h2>
+  <h2 class="t-zh stitle-z rv">簡單4步驟，馬上開始</h2>
+  <h2 class="t-en stitle-e rv">Up and Running in 4 Simple Steps</h2>
+  <p class="ssub t-ja">Simple Onboarding Process</p>
+  <div class="flow-g">
+    <div class="fs rv"><div class="fn">01</div><div class="fi">📩</div>
+      <div class="t-ja ft2">お問い合わせ</div><div class="t-zh ft2z">聯絡詢問</div><div class="t-en ft2e">Inquiry</div>
+      <p class="t-ja fd">フォームまたはお電話にてお気軽にご連絡ください。</p>
+      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">透過表單或電話與我們聯絡。</p>
+      <p class="t-en fd">Reach out via our contact form or phone.</p>
+    </div>
+    <div class="fs rv"><div class="fn">02</div><div class="fi">🏠</div>
+      <div class="t-ja ft2">現地確認・お見積もり</div><div class="t-zh ft2z">現場確認・報價</div><div class="t-en ft2e">Site Visit &amp; Quote</div>
+      <p class="t-ja fd">施設を拝見し、最適なプランと料金をご提案します。</p>
+      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">實地了解您的設施，提供最適合的方案與報價。</p>
+      <p class="t-en fd">We visit your property and propose the best plan and pricing.</p>
+    </div>
+    <div class="fs rv"><div class="fn">03</div><div class="fi">📝</div>
+      <div class="t-ja ft2">契約・スケジュール設定</div><div class="t-zh ft2z">簽約・排程安排</div><div class="t-en ft2e">Contract &amp; Scheduling</div>
+      <p class="t-ja fd">ご予約カレンダーと連携し、清掃スケジュールを自動調整。</p>
+      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">與預約行事曆整合，自動調整清掃排程。</p>
+      <p class="t-en fd">We sync with your booking calendar to auto-schedule every clean.</p>
+    </div>
+    <div class="fs rv"><div class="fn">04</div><div class="fi">✨</div>
+      <div class="t-ja ft2">清掃スタート・完了報告</div><div class="t-zh ft2z">開始清掃・完成回報</div><div class="t-en ft2e">Clean &amp; Report</div>
+      <p class="t-ja fd">清掃完了後、写真付きで報告。安心してゲストをお迎えください。</p>
+      <p class="t-zh fd" style="font-family:'Noto Serif TC',serif">清掃完成後附上照片回報，讓您安心迎接每位房客。</p>
+      <p class="t-en fd">After every clean you receive a photo report. Welcome your guests with confidence.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY -->
+<section id="company" class="sec sec-c">
+  <div class="co-g">
+    <div>
+      <div class="slabel"><span class="t-ja">会社概要</span><span class="t-zh">公司概要</span><span class="t-en">Company Profile</span></div>
+      <h2 class="t-ja stitle rv">護持株式会社</h2>
+      <h2 class="t-zh stitle-z rv">護持株式會社</h2>
+      <h2 class="t-en stitle-e rv">GOJI Co., Ltd.</h2>
+      <p class="ssub">goji-shogon.jp</p>
+      <table class="co-t">
+        <tr>
+          <th><span class="t-ja">名称</span><span class="t-zh">名稱</span><span class="t-en">Name</span></th>
+          <td><strong>護持株式会社</strong><small>GOJI Co., Ltd.</small></td>
+        </tr>
+        <tr>
+          <th><span class="t-ja">住所</span><span class="t-zh">地址</span><span class="t-en">Address</span></th>
+          <td>〒413-0302<br/>静岡県賀茂郡東伊豆町奈良本3302番35</td>
+        </tr>
+        <tr>
+          <th><span class="t-ja">設立</span><span class="t-zh">成立</span><span class="t-en">Founded</span></th>
+          <td>令和2年11月6日<small>November 6, 2020</small></td>
+        </tr>
+        <tr>
+          <th><span class="t-ja">法人番号</span><span class="t-zh">法人番號</span><span class="t-en">Corp. No.</span></th>
+          <td>1300-01-067987</td>
+        </tr>
+        <tr>
+          <th><span class="t-ja">事業内容</span><span class="t-zh">業務內容</span><span class="t-en">Business</span></th>
+          <td>
+            <span class="t-ja">民宿・旅館・ゲストハウス専門清掃サービス</span>
+            <span class="t-zh" style="font-family:'Noto Serif TC',serif">民宿・旅館・Guest House 專業清掃服務</span>
+            <span class="t-en">Specialized cleaning for guesthouses, ryokan &amp; B&amp;Bs</span>
+          </td>
+        </tr>
+        <tr>
+          <th><span class="t-ja">対応エリア</span><span class="t-zh">服務地區</span><span class="t-en">Service Area</span></th>
+          <td>
+            <span class="t-ja">東伊豆町・伊豆半島全域</span>
+            <span class="t-zh" style="font-family:'Noto Serif TC',serif">東伊豆町・伊豆半島全區</span>
+            <span class="t-en">Higashi-Izu &amp; entire Izu Peninsula</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="co-v rv">
+      <div class="cv-domain">goji-shogon.jp</div>
+      <div class="t-ja cv-tag-j">「清潔」という名のおもてなしを、届ける。</div>
+      <div class="t-zh cv-tag-z">以「清潔」之名，傳遞款待的心意。</div>
+      <div class="t-en cv-tag-e">Delivering hospitality<br/>through the art of clean.</div>
+      <div class="cv-list">
+        <div class="cv-item"><span class="t-ja">東伊豆・伊豆半島エリア対応</span><span class="t-zh" style="font-family:'Noto Serif TC',serif">東伊豆・伊豆半島地區服務</span><span class="t-en">Serving Izu Peninsula &amp; surroundings</span></div>
+        <div class="cv-item"><span class="t-ja">民宿・旅館・ゲストハウス専門</span><span class="t-zh" style="font-family:'Noto Serif TC',serif">民宿・旅館・Guest House 專業服務</span><span class="t-en">Guesthouse &amp; Ryokan specialists</span></div>
+        <div class="cv-item"><span class="t-ja">写真付き清掃完了レポート</span><span class="t-zh" style="font-family:'Noto Serif TC',serif">清掃完成附照片回報</span><span class="t-en">Photo completion reports every time</span></div>
+        <div class="cv-item"><span class="t-ja">令和2年設立・地域に根ざした会社</span><span class="t-zh" style="font-family:'Noto Serif TC',serif">令和2年創立・深耕在地</span><span class="t-en">Founded 2020 · locally rooted company</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="slabel"><span class="t-ja">お問い合わせ</span><span class="t-zh">聯絡我們</span><span class="t-en">Contact</span></div>
+  <h2 class="t-ja stitle rv">まずはお気軽にご相談ください</h2>
+  <h2 class="t-zh stitle-z rv">歡迎隨時與我們洽談</h2>
+  <h2 class="t-en stitle-e rv">Let's Talk — No Pressure</h2>
+  <p class="ssub t-ja">Free Consultation Available</p>
+  <div class="ct-g">
+    <div class="ci-list">
+      <div class="ci-row"><div class="ci-ico">📍</div><div>
+        <div class="ci-ttl t-ja">所在地</div><div class="ci-ttl t-zh">所在地</div><div class="ci-ttl t-en">Location</div>
+        <div class="ci-val">〒413-0302<br/>静岡県賀茂郡東伊豆町奈良本3302番35</div>
+      </div></div>
+      <div class="ci-row"><div class="ci-ico">🌐</div><div>
+        <div class="ci-ttl">Website</div>
+        <div class="ci-val">goji-shogon.jp</div>
+      </div></div>
+      <div class="ci-row"><div class="ci-ico">🕐</div><div>
+        <div class="ci-ttl t-ja">受付時間</div><div class="ci-ttl t-zh">受理時間</div><div class="ci-ttl t-en">Business Hours</div>
+        <div class="t-ja ci-val">平日 8:00〜19:00<br/>土日祝は翌営業日に対応</div>
+        <div class="t-zh ci-val" style="font-family:'Noto Serif TC',serif">平日 8:00〜19:00<br/>假日留言，下一個工作日回覆</div>
+        <div class="t-en ci-val">Mon–Fri 8:00–19:00<br/>Weekends: reply next business day</div>
+      </div></div>
+      <div class="ci-row"><div class="ci-ico">🏢</div><div>
+        <div class="ci-ttl t-ja">法人番号</div><div class="ci-ttl t-zh">法人番號</div><div class="ci-ttl t-en">Corp. Number</div>
+        <div class="ci-val">1300-01-067987</div>
+      </div></div>
+    </div>
+    <div class="fbox">
+      <div class="t-ja fbox-ttl">お問い合わせフォーム</div>
+      <div class="t-zh fbox-ttlz">聯絡表單</div>
+      <div class="t-en fbox-ttle">Send Us a Message</div>
+      <div class="f-row2">
+        <div class="fg">
+          <label><span class="t-ja">お名前</span><span class="t-zh">姓名</span><span class="t-en">Name</span></label>
+          <input type="text" id="f-name" placeholder="山田 太郎"/>
+        </div>
+        <div class="fg">
+          <label><span class="t-ja">電話番号</span><span class="t-zh">電話</span><span class="t-en">Phone</span></label>
+          <input type="tel" id="f-phone" placeholder="000-0000-0000"/>
+        </div>
+      </div>
+      <div class="fg">
+        <label><span class="t-ja">メールアドレス</span><span class="t-zh">電子郵件</span><span class="t-en">Email</span></label>
+        <input type="email" id="f-email" placeholder="example@mail.com"/>
+      </div>
+      <div class="fg">
+        <label><span class="t-ja">施設名</span><span class="t-zh">設施名稱</span><span class="t-en">Property Name</span></label>
+        <input type="text" id="f-prop" placeholder="〇〇 旅館 / Guest House"/>
+      </div>
+      <div class="fg">
+        <label><span class="t-ja">ご希望サービス</span><span class="t-zh">希望服務</span><span class="t-en">Service Needed</span></label>
+        <select id="f-svc">
+          <option value=""><span class="t-ja">選択してください</span></option>
+          <option>客室清掃・ベッドメイキング</option>
+          <option>アメニティ補充・セッティング</option>
+          <option>浴室・トイレ清掃</option>
+          <option>共用エリア清掃</option>
+          <option>リネン交換・洗濯</option>
+          <option>定期大掃除・特別清掃</option>
+          <option>複数サービスのご相談</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label><span class="t-ja">お問い合わせ内容</span><span class="t-zh">詢問內容</span><span class="t-en">Message</span></label>
+        <textarea id="f-msg" placeholder="..."></textarea>
+      </div>
+      <button class="bsub" id="sendBtn" onclick="submitForm()">
+        <span class="t-ja">送信する</span><span class="t-zh">送出</span><span class="t-en">Send Message</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-top">
+    <div class="ft-brand">
+      <div class="fe">GO<span>JI</span> Co., Ltd.</div>
+      <div class="fj">護持株式会社</div>
+      <div class="fd2">goji-shogon.jp</div>
+    </div>
+    <div class="ft-info">
+      〒413-0302 静岡県賀茂郡東伊豆町奈良本3302番35<br/>
+      法人番号：1300-01-067987 ／ 設立：令和2年11月6日<br/>
+      <span class="t-ja">民宿・旅館・ゲストハウス専門清掃サービス</span>
+      <span class="t-zh" style="font-family:'Noto Serif TC',serif">民宿・旅館・Guest House 專業清掃服務</span>
+      <span class="t-en">Professional Cleaning for Guesthouses &amp; Ryokan</span>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <div class="ft-copy">© 2024 護持株式会社 GOJI Co., Ltd. All rights reserved.</div>
+    <div class="ft-links">
+      <a href="#" class="t-ja">プライバシーポリシー</a>
+      <a href="#" class="t-zh">隱私政策</a>
+      <a href="#" class="t-en">Privacy Policy</a>
+      <a href="#contact" class="t-ja">お問い合わせ</a>
+      <a href="#contact" class="t-zh">聯絡我們</a>
+      <a href="#contact" class="t-en">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<div id="toast"></div>
+
+<script>
+const MSGS={ja:'ただいま混み合っております。しばらくしてから再度お試しください。',zh:'目前系統繁忙，請稍後再試。',en:"We're currently busy. Please try again shortly."};
+let curLang='ja';
+function setLang(l){
+  curLang=l;
+  document.documentElement.setAttribute('data-lang',l);
+  document.querySelectorAll('.lb').forEach(b=>b.classList.remove('active'));
+  document.querySelector('.lb[onclick="setLang(\''+l+'\')"]').classList.add('active');
+}
+function toggleNav(){document.getElementById('navLinks').classList.toggle('open')}
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
+window.addEventListener('scroll',()=>{document.getElementById('nav').style.background=window.scrollY>30?'rgba(17,24,32,1)':'rgba(17,24,32,.96)'});
+function submitForm(){
+  const btn=document.getElementById('sendBtn');
+  btn.disabled=true;
+  const s={ja:'送信中…',zh:'傳送中…',en:'Sending…'};
+  btn.querySelectorAll('.t-ja,.t-zh,.t-en').forEach(el=>{
+    const l=Array.from(el.classList).find(c=>c.startsWith('t-'))?.slice(2);
+    if(l&&s[l])el.textContent=s[l];
+  });
+  setTimeout(()=>{
+    ['f-name','f-phone','f-email','f-prop','f-msg'].forEach(id=>{const e=document.getElementById(id);if(e)e.value='';});
+    document.getElementById('f-svc').value='';
+    btn.disabled=false;
+    const orig={ja:'送信する',zh:'送出',en:'Send Message'};
+    btn.querySelectorAll('.t-ja,.t-zh,.t-en').forEach(el=>{
+      const l=Array.from(el.classList).find(c=>c.startsWith('t-'))?.slice(2);
+      if(l&&orig[l])el.textContent=orig[l];
+    });
+    const t=document.getElementById('toast');
+    t.textContent=MSGS[curLang];
+    t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'),5000);
+  },1600);
+}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.08});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
